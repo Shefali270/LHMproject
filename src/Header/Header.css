@@ -1,0 +1,816 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  background: #ffffff;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+
+  position: absolute;
+  top: 5px;
+  left: 60px;
+
+  z-index: 10;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+  width: 100%;
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 0 45px 0 160px;
+  gap: 20px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  position: relative;
+  z-index: 5;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333333;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+
+/* SEARCH */
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+
+/* LOGIN */
+
+nav a:nth-last-child(2) {
+  padding: 9px 17px;
+
+  border: 1px solid #2563eb;
+  border-radius: 5px;
+
+  color: #2563eb;
+}
+
+
+/* SIGN */
+
+nav a:last-child {
+  padding: 9px 17px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 5px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  width: 100%;
+  min-height: 610px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 55px 70px 65px 90px;
+
+  background: #ffffff;
+}
+
+.hero-content {
+  width: 55%;
+}
+
+.hero-content h4 {
+  margin: 0 0 15px;
+
+  color: #2563eb;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  margin: 0 0 22px;
+
+  color: #222222;
+
+  font-size: 50px;
+  line-height: 1.15;
+}
+
+.brighter {
+  color: #2563eb;
+}
+
+.hero-content > p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* BUTTONS */
+
+.hero-button {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.get-Started {
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.explore-courses {
+  padding: 12px 24px;
+
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* FEATURES */
+
+.Feature-iteam {
+  display: inline-block;
+
+  width: 23%;
+
+  vertical-align: top;
+
+  margin-top: 38px;
+  padding-right: 10px;
+}
+
+.Feature-iteam h3 {
+  margin: 0 0 6px;
+
+  color: #222222;
+
+  font-size: 14px;
+}
+
+.Feature-iteam p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+
+/* STUDENT IMAGE */
+
+.student-image {
+  width: 45%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-image img {
+  width: 500px;
+  max-width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   SIX BOX
+========================= */
+
+.six-box {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 15px;
+
+  padding: 35px 45px 45px;
+
+  background: #f8fafc;
+}
+
+
+/* ROLE BOX */
+
+.role-box {
+  width: 100%;
+  min-height: 230px;
+
+  padding: 22px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  position: relative;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  overflow: hidden;
+}
+
+.role-logo {
+  width: 45px;
+  height: 45px;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin-bottom: 14px;
+}
+
+.role-box h3 {
+  margin: 0 0 10px;
+
+  color: #222222;
+
+  font-size: 16px;
+}
+
+.role-box p {
+  margin: 0 0 22px;
+
+  color: #666666;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.role-box a {
+  text-decoration: none;
+
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+
+  position: absolute;
+
+  right: 18px;
+  bottom: 20px;
+
+  object-fit: contain;
+}
+
+
+/* =================================================
+   BLUE STATS SECTION
+================================================= */
+
+.stats-section {
+  width: 100%;
+  height: 145px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.8fr;
+
+  align-items: center;
+
+  padding: 20px 7%;
+
+  background-color: #104b82;
+
+  color: #ffffff;
+}
+
+
+/* STAT */
+
+.stat-item {
+  height: 90px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-left: 25px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+/* ICON */
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 50%;
+
+  margin-bottom: 5px;
+
+  font-size: 20px;
+}
+
+
+/* NUMBER */
+
+.stat-item h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+
+/* TEXT */
+
+.stat-item p {
+  margin: 2px 0 0;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+
+/* TOGETHER */
+
+.tomorrow {
+  padding-left: 45px;
+}
+
+.tomorrow h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+}
+
+.tomorrow strong {
+  font-weight: 700;
+}
+
+
+/* YELLOW LINE */
+
+.yellow-line {
+  width: 145px;
+  height: 5px;
+
+  margin-top: 12px;
+
+  background: #f5c542;
+
+  border-radius: 50%;
+
+  transform: rotate(-4deg);
+}
+
+
+/* =================================================
+   POPULAR CATEGORIES
+================================================= */
+
+.categories-section {
+  width: 100%;
+
+  padding: 25px 3.2% 50px;
+
+  background: #ffffff;
+}
+
+.categories-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.categories-heading h2 {
+  margin: 0;
+
+  color: #163b68;
+
+  font-size: 25px;
+}
+
+.categories-heading a {
+  text-decoration: none;
+
+  color: #1458a0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.categories-heading a span {
+  margin-left: 7px;
+
+  font-size: 20px;
+}
+
+
+/* =================================================
+   LARGE SCREEN
+================================================= */
+
+@media (min-width: 1400px) {
+
+  nav {
+    gap: 25px;
+    padding-right: 60px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding-left: 110px;
+    padding-right: 100px;
+  }
+
+  .hero-content h1 {
+    font-size: 54px;
+  }
+
+  .student-image img {
+    width: 520px;
+  }
+}
+
+
+/* =================================================
+   TABLET
+================================================= */
+
+@media (max-width: 1200px) {
+
+  nav {
+    gap: 12px;
+
+    padding-left: 130px;
+    padding-right: 25px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-left: 60px;
+    padding-right: 50px;
+  }
+
+  .hero-content h1 {
+    font-size: 43px;
+  }
+
+  .student-image img {
+    width: 420px;
+  }
+
+  .six-box {
+    grid-template-columns: repeat(3, 1fr);
+
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .stats-section {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .stat-item {
+    padding-left: 15px;
+  }
+
+  .tomorrow {
+    padding-left: 25px;
+  }
+}
+
+
+/* =================================================
+   SMALL TABLET
+================================================= */
+
+@media (max-width: 900px) {
+
+  nav {
+    display: none;
+  }
+
+  .logo {
+    left: 25px;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 50px 35px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .student-image {
+    width: 100%;
+
+    margin-top: 40px;
+  }
+
+  .student-image img {
+    width: 450px;
+
+    max-width: 90%;
+  }
+
+  .Feature-iteam {
+    width: 48%;
+  }
+
+  .six-box {
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 45px 30px;
+  }
+
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+
+    height: auto;
+
+    gap: 20px;
+
+    padding: 30px;
+  }
+
+  .tomorrow {
+    grid-column: span 2;
+
+    padding-left: 0;
+
+    text-align: center;
+  }
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 40px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .hero-content > p {
+    font-size: 15px;
+  }
+
+  .hero-button {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .Feature-iteam {
+    width: 100%;
+
+    margin-top: 22px;
+  }
+
+  .student-image img {
+    width: 320px;
+  }
+
+  .six-box {
+    grid-template-columns: 1fr;
+
+    padding: 35px 20px;
+  }
+
+  .stats-section {
+    grid-template-columns: 1fr;
+
+    height: auto;
+
+    padding: 30px 20px;
+  }
+
+  .stat-item {
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    padding: 15px 0;
+  }
+
+  .tomorrow {
+    grid-column: auto;
+
+    padding: 20px 0 0;
+
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+
+  .header {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 25px 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .hero-content h1 {
+    font-size: 28px !important;
+  }
+
+  .hero-content p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  .hero-button {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .Feature-iteam {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 8px 0 !important;
+  }
+
+  .student-image {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+  }
+
+  .student-image img {
+    width: 85% !important;
+    max-width: 300px !important;
+    height: auto !important;
+  }
+
+  .six-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    padding: 20px 15px !important;
+  }
+
+  .role-box {
+    width: 100% !important;
+  }
+}
+}
