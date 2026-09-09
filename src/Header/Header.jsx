@@ -1,8 +1,8 @@
 import "./Header.css";
 
-import logo from "./logo.jpg";
+import logo from "./splashLogo.png";
 import seachLogo from "./seach logo.png";
-import StudentLogoCopy from "./Student logo copy.png";
+import StudentLogoCopy from "./Teaching.jpg";
 import TeacherLog from "./Teacher log.jpg";
 import ArrowIcons from "./Arrow icons.png";
 import InstitutionLogo from "./-institution logo.jpg";
@@ -15,12 +15,21 @@ function Header() {
     <div className="header">
 
       {/* ================= LOGO ================= */}
+<div className="logo-header">
 
-      <img
-        src={logo}
-        alt="LHM Project"
-        className="logo"
-      />
+  <img
+    src={logo}
+    alt="LHM Project"
+    className="logo"
+  />
+
+  <div className="logo-text">
+    <h2 className="company-name">LMH</h2>
+    <h3 className="LiveMentorHub">LiveMentorHub</h3>
+    <p className="tagline">Learn • Connect • Grow</p>
+  </div>
+
+</div>
 
       {/* ================= NAVIGATION ================= */}
 

@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -12,11 +16,15 @@ body,
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   background: #ffffff;
 }
+
+
+/* =========================
+   HEADER
+========================= */
 
 .header {
   width: 100%;
@@ -24,21 +32,82 @@ body {
   background: #ffffff;
 }
 
-/* LOGO */
 
-.logo {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
+/* =========================
+   LOGO + NAME
+========================= */
 
+.logo-header {
   position: absolute;
   top: 5px;
-  left: 60px;
+  left: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 0px;
 
   z-index: 20;
 }
 
-/* NAV */
+.logo-header .logo {
+  width: 85px;
+  height: 85px;
+
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.company-name {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.0;
+
+  color: #123b6d;
+
+  white-space: nowrap;
+}
+
+.LiveMentorHub {
+  margin: 3px 0 0;
+  padding: 0;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.0;
+
+  color: #123b6d;
+
+  white-space: nowrap;
+}
+
+.tagline {
+  margin: 5px 0 0;
+  padding: 0;
+  line-height: 1.0;
+  font-size: 11px;
+  font-weight: 500;
+
+  color: #666666;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
   width: 100%;
@@ -48,7 +117,7 @@ nav {
   align-items: center;
   justify-content: flex-end;
 
-  padding: 0 45px 0 160px;
+  padding: 0 45px 0 350px;
   gap: 20px;
 
   background: #ffffff;
@@ -62,6 +131,7 @@ nav {
 
 nav a {
   text-decoration: none;
+
   color: #333333;
 
   font-size: 13px;
@@ -75,7 +145,10 @@ nav a:hover {
   color: #2563eb;
 }
 
-/* SEARCH */
+
+/* =========================
+   SEARCH
+========================= */
 
 .search {
   display: flex;
@@ -86,10 +159,14 @@ nav a:hover {
 .search img {
   width: 23px;
   height: 23px;
+
   object-fit: contain;
 }
 
-/* LOGIN */
+
+/* =========================
+   LOGIN BUTTON
+========================= */
 
 .login-btn {
   padding: 9px 17px;
@@ -98,9 +175,19 @@ nav a:hover {
   border-radius: 5px;
 
   color: #2563eb !important;
+
+  transition: 0.2s;
 }
 
-/* SIGN */
+.login-btn:hover {
+  background: #2563eb;
+  color: #ffffff !important;
+}
+
+
+/* =========================
+   SIGN UP BUTTON
+========================= */
 
 .sign-btn {
   padding: 9px 17px;
@@ -109,11 +196,20 @@ nav a:hover {
   color: #ffffff !important;
 
   border-radius: 5px;
+
+  transition: 0.2s;
 }
 
-/* HERO */
+.sign-btn:hover {
+  background: #174ea6;
+}
 
-.hero {
+
+/* =========================
+   HERO
+========================= */
+
+/* .hero {
   width: 100%;
   min-height: 610px;
 
@@ -123,24 +219,70 @@ nav a:hover {
   padding: 55px 7% 65px;
 
   background: #ffffff;
-}
+} */
 
 .hero-content {
   width: 55%;
   max-width: 700px;
 }
 
-.hero-content h4 {
-  margin: 0 0 15px;
+/* =========================
+   HERO
+========================= */
 
-  color: #2563eb;
+.hero {
+  width: 100%;
+  min-height: 610px;
 
-  font-size: 15px;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  letter-spacing: 1px;
+  padding: 55px 5% 65px;
+
+  background: #ffffff;
+
+  text-align: left;
 }
 
+
+/* =========================
+   HERO CONTENT - LEFT
+========================= */
+
+.hero-content {
+  width: 55%;
+  max-width: 700px;
+
+  text-align: left !important;
+}
+
+
+/* Welcome */
+/* =========================
+   WELCOME
+========================= */
+
+.hero-content h4 {
+  display: inline-block;
+
+  margin: 0 0 15px;
+  padding: 7px 14px;
+
+  background: #dff3ff;
+  color: #2563eb;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-align: left;
+}
+
+/* Learn Today + Brighter Tomorrow */
 .hero-content h1 {
   margin: 0 0 22px;
 
@@ -148,12 +290,16 @@ nav a:hover {
 
   font-size: 50px;
   line-height: 1.15;
+
+  text-align: left !important;
 }
 
 .brighter {
   color: #2563eb;
 }
 
+
+/* Paragraph */
 .hero-content > p {
   margin: 0;
 
@@ -161,13 +307,23 @@ nav a:hover {
 
   font-size: 16px;
   line-height: 1.7;
+
+  text-align: left !important;
 }
 
-/* BUTTONS */
+
+/* =========================
+   BUTTONS
+========================= */
 
 .hero-button {
   display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+
   gap: 15px;
+
   margin-top: 28px;
 }
 
@@ -175,6 +331,8 @@ nav a:hover {
   cursor: pointer;
 }
 
+
+/* Get Started */
 .get-Started {
   padding: 13px 24px;
 
@@ -188,6 +346,8 @@ nav a:hover {
   font-weight: 600;
 }
 
+
+/* Explore */
 .explore-courses {
   padding: 12px 24px;
 
@@ -201,21 +361,30 @@ nav a:hover {
   font-weight: 600;
 }
 
-/* FEATURES */
+
+/* =========================
+   FEATURES
+========================= */
 
 .features {
   width: 100%;
 
   display: flex;
 
-  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  gap: 25px;
 
   margin-top: 38px;
+
+  text-align: left;
 }
 
 .Feature-iteam {
   width: 25%;
-  padding-right: 5px;
+
+  padding: 0;
 }
 
 .Feature-iteam h3 {
@@ -224,6 +393,8 @@ nav a:hover {
   color: #222222;
 
   font-size: 14px;
+
+  text-align: left;
 }
 
 .Feature-iteam p {
@@ -232,14 +403,20 @@ nav a:hover {
   color: #777777;
 
   font-size: 13px;
+
+  text-align: left;
 }
 
-/* STUDENT IMAGE */
+
+/* =========================
+   STUDENT IMAGE - RIGHT
+========================= */
 
 .student-image {
-  width: 45%;
-
+  width: 50%;
+  height: 300px;
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -247,16 +424,19 @@ nav a:hover {
 }
 
 .student-image img {
-  width: 500px;
+  width: 650px;
   max-width: 100%;
-  height: auto;
+  height: 666;
 
   display: block;
 
-  object-fit: contain;
+  object-fit: cover;
 }
 
-/* SIX BOX */
+
+/* =========================
+   SIX BOX
+========================= */
 
 .six-box {
   width: 100%;
@@ -272,7 +452,10 @@ nav a:hover {
   background: #f8fafc;
 }
 
-/* ROLE BOX */
+
+/* =========================
+   ROLE BOX
+========================= */
 
 .role-box {
   width: 100%;
@@ -331,6 +514,10 @@ nav a:hover {
   font-weight: 600;
 }
 
+.role-box a:hover {
+  text-decoration: underline;
+}
+
 .arrow-icon {
   width: 18px;
   height: 18px;
@@ -343,7 +530,10 @@ nav a:hover {
   object-fit: contain;
 }
 
-/* STATS */
+
+/* =========================
+   BLUE STATS
+========================= */
 
 .stats-section {
   width: 100%;
@@ -417,7 +607,10 @@ nav a:hover {
   font-size: 13px;
 }
 
-/* TOMORROW */
+
+/* =========================
+   TOMORROW
+========================= */
 
 .tomorrow {
   padding-left: 45px;
@@ -448,7 +641,10 @@ nav a:hover {
   transform: rotate(-4deg);
 }
 
-/* POPULAR */
+
+/* =========================
+   POPULAR CATEGORIES
+========================= */
 
 .categories-section {
   width: 100%;
@@ -492,15 +688,16 @@ nav a:hover {
 }
 
 
-/* =====================================
+/* =========================
    LARGE SCREEN
-===================================== */
+========================= */
 
 @media (min-width: 1400px) {
 
   nav {
     gap: 25px;
     padding-right: 60px;
+    padding-left: 360px;
   }
 
   nav a {
@@ -522,16 +719,28 @@ nav a:hover {
 }
 
 
-/* =====================================
+/* =========================
    TABLET
-===================================== */
+========================= */
 
 @media (max-width: 1200px) {
+
+  .logo-header {
+    left: 20px;
+  }
+
+  .company-name {
+    font-size: 20px;
+  }
+
+  .LiveMentorHub {
+    font-size: 13px;
+  }
 
   nav {
     gap: 12px;
 
-    padding-left: 130px;
+    padding-left: 280px;
     padding-right: 25px;
   }
 
@@ -574,11 +783,34 @@ nav a:hover {
 }
 
 
-/* =====================================
+/* =========================
    SMALL TABLET
-===================================== */
+========================= */
 
 @media (max-width: 900px) {
+
+  .logo-header {
+    position: absolute;
+    left: 15px;
+    top: 3px;
+  }
+
+  .logo-header .logo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .company-name {
+    font-size: 18px;
+  }
+
+  .LiveMentorHub {
+    font-size: 12px;
+  }
+
+  .tagline {
+    font-size: 9px;
+  }
 
   nav {
     width: 100%;
@@ -586,12 +818,11 @@ nav a:hover {
     justify-content: flex-start;
 
     overflow-x: auto;
-
     overflow-y: hidden;
 
     white-space: nowrap;
 
-    padding: 10px 15px 10px 90px;
+    padding: 10px 15px 10px 270px;
 
     gap: 14px;
 
@@ -605,14 +836,6 @@ nav a:hover {
   nav a {
     flex-shrink: 0;
     font-size: 11px;
-  }
-
-  .logo {
-    width: 65px;
-    height: 65px;
-
-    left: 15px;
-    top: 3px;
   }
 
   .hero {
@@ -684,9 +907,9 @@ nav a:hover {
 }
 
 
-/* =====================================
-   iPHONE 14 PRO MAX / MOBILE
-===================================== */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -698,12 +921,28 @@ nav a:hover {
 
   /* LOGO */
 
-  .logo {
-    width: 58px;
-    height: 58px;
+  .logo-header {
+    left: 10px;
+    top: 5px;
 
-    top: 6px;
-    left: 12px;
+    gap: 7px;
+  }
+
+  .logo-header .logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .company-name {
+    font-size: 16px;
+  }
+
+  .LiveMentorHub {
+    font-size: 11px;
+  }
+
+  .tagline {
+    font-size: 8px;
   }
 
 
@@ -722,10 +961,9 @@ nav a:hover {
 
     gap: 12px;
 
-    padding: 8px 10px 8px 78px;
+    padding: 8px 10px 8px 190px;
 
     overflow-x: auto;
-
     overflow-y: hidden;
 
     white-space: nowrap;
