@@ -2,7 +2,12 @@ import "./Header.css";
 
 import logo from "./splashLogo.png";
 import seachLogo from "./seach logo.png";
-import StudentLogoCopy from "./Teaching.jpg";
+
+// ================= BACKGROUND VIDEO =================
+import backgroundVideo from "./video.mp4";
+
+// ================= ROLE IMAGES =================
+import student from "./Student logo copy.png";
 import TeacherLog from "./Teacher log.jpg";
 import ArrowIcons from "./Arrow icons.png";
 import InstitutionLogo from "./-institution logo.jpg";
@@ -10,76 +15,140 @@ import ProfessionalLogo from "./professional logo.webp";
 import CompanyLogo from "./company logo copy.png";
 import JobLogo from "./job logo copy.png";
 
+
 function Header() {
   return (
     <div className="header">
 
       {/* ================= LOGO ================= */}
-<div className="logo-header">
 
-  <img
-    src={logo}
-    alt="LHM Project"
-    className="logo"
-  />
+      <div className="logo-header">
 
-  <div className="logo-text">
-    <h2 className="company-name">LMH</h2>
-    <h3 className="LiveMentorHub">LiveMentorHub</h3>
-    <p className="tagline">Learn • Connect • Grow</p>
-  </div>
+        <img
+          src={logo}
+          alt="LHM Project"
+          className="logo"
+        />
 
-</div>
+        <div className="logo-text">
+
+          <h2 className="company-name">
+            LMH
+          </h2>
+
+          <h3 className="LiveMentorHub">
+            LiveMentorHub
+          </h3>
+
+          <p className="tagline">
+            Learn • Connect • Grow
+          </p>
+
+        </div>
+
+      </div>
+
 
       {/* ================= NAVIGATION ================= */}
 
-      <nav>
+      {/* <nav>
 
-        <a href="/">Home</a>
+        <a href="/">
+          Home
+        </a>
 
-        <a href="/">Explore Learning</a>
+        <a href="/">
+          Explore Learning
+        </a>
 
-        <a href="/">Courses</a>
+        <a href="/">
+          Courses
+        </a>
 
-        <a href="/">Mentors</a>
+        <a href="/">
+          Mentors
+        </a>
 
-        <a href="/">Institutions</a>
+        <a href="/">
+          Institutions
+        </a>
 
-        <a href="/">Careers</a>
+        <a href="/">
+          Careers
+        </a>
 
-        <a href="/">Resources</a>
+        <a href="/">
+          Resources
+        </a>
 
-        <a href="/">About</a>
+        <a href="/">
+          About
+        </a>
 
-        <a href="/">Contact</a>
+        <a href="/">
+          Contact
+        </a> */}
 
-        {/* SEARCH */}
 
-        <a href="/" className="search">
+        {/* ================= SEARCH ================= */}
+
+        {/* <a
+          href="/"
+          className="search"
+        >
           <img
             src={seachLogo}
             alt="Search"
           />
-        </a>
+        </a> */}
 
-        {/* LOGIN */}
 
-        <a href="/" className="login-btn">
+        {/* ================= LOGIN ================= */}
+
+        {/* <a
+          href="/"
+          className="login-btn"
+        >
           Login
-        </a>
+        </a> */}
 
-        {/* SIGN */}
 
-        <a href="/" className="sign-btn">
+        {/* ================= SIGN ================= */}
+{/* 
+        <a
+          href="/"
+          className="sign-btn"
+        >
           Sign
         </a>
 
-      </nav>
+      </nav> */}
 
 
-      {/* ================= HERO ================= */}
+      {/* =================================================
+          HERO SECTION
+      ================================================= */}
 
       <section className="hero">
+
+        {/* ================= BACKGROUND VIDEO ================= */}
+
+        <video
+          className="hero-background-video"
+          src={backgroundVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+
+
+        {/* ================= DARK OVERLAY ================= */}
+
+        <div className="hero-overlay"></div>
+
+
+        {/* ================= HERO CONTENT ================= */}
 
         <div className="hero-content">
 
@@ -87,14 +156,19 @@ function Header() {
             WELCOME TO LIVEMENTORHUB
           </h4>
 
+
           <h1>
+
             Learn Today
+
             <br />
 
             <span className="brighter">
               Build a brighter Tomorrow
             </span>
+
           </h1>
+
 
           <p>
             Your one-stop platform for Learning, mentoring, career growth
@@ -105,7 +179,7 @@ function Header() {
           </p>
 
 
-          {/* BUTTONS */}
+          {/* ================= BUTTONS ================= */}
 
           <div className="hero-button">
 
@@ -120,11 +194,12 @@ function Header() {
           </div>
 
 
-          {/* FEATURES */}
+          {/* ================= FEATURES ================= */}
 
           <div className="features">
 
             <div className="Feature-iteam">
+
               <h3>
                 Live & interactive
               </h3>
@@ -132,10 +207,12 @@ function Header() {
               <p>
                 Classes
               </p>
+
             </div>
 
 
             <div className="Feature-iteam">
+
               <h3>
                 Explore Mentors
               </h3>
@@ -143,10 +220,12 @@ function Header() {
               <p>
                 & Teacher
               </p>
+
             </div>
 
 
             <div className="Feature-iteam">
+
               <h3>
                 Learn at Your
               </h3>
@@ -154,10 +233,12 @@ function Header() {
               <p>
                 Own Pace
               </p>
+
             </div>
 
 
             <div className="Feature-iteam">
+
               <h3>
                 Career Guidance
               </h3>
@@ -165,38 +246,29 @@ function Header() {
               <p>
                 & Opportunities
               </p>
+
             </div>
 
           </div>
 
         </div>
 
-
-        {/* STUDENT IMAGE */}
-
-        <div className="student-image">
-
-          <img
-            src={StudentLogoCopy}
-            alt="Student"
-          />
-
-        </div>
-
       </section>
 
 
-      {/* ================= SIX BOX ================= */}
+      {/* =================================================
+          SIX ROLE BOXES
+      ================================================= */}
 
       <section className="six-box">
 
 
-        {/* STUDENT */}
+        {/* ================= STUDENT ================= */}
 
         <div className="role-box">
 
           <img
-            src={StudentLogoCopy}
+            src={student}
             alt="Student"
             className="role-logo"
           />
@@ -222,7 +294,7 @@ function Header() {
         </div>
 
 
-        {/* TEACHER */}
+        {/* ================= TEACHER ================= */}
 
         <div className="role-box">
 
@@ -253,7 +325,7 @@ function Header() {
         </div>
 
 
-        {/* INSTITUTION */}
+        {/* ================= INSTITUTION ================= */}
 
         <div className="role-box">
 
@@ -284,7 +356,7 @@ function Header() {
         </div>
 
 
-        {/* PROFESSIONAL MENTOR */}
+        {/* ================= PROFESSIONAL MENTOR ================= */}
 
         <div className="role-box">
 
@@ -315,7 +387,7 @@ function Header() {
         </div>
 
 
-        {/* COMPANY */}
+        {/* ================= COMPANY ================= */}
 
         <div className="role-box">
 
@@ -346,7 +418,7 @@ function Header() {
         </div>
 
 
-        {/* JOB SEEKER */}
+        {/* ================= JOB SEEKER ================= */}
 
         <div className="role-box">
 
@@ -379,7 +451,9 @@ function Header() {
       </section>
 
 
-      {/* ================= BLUE STATS ================= */}
+      {/* =================================================
+          BLUE STATS
+      ================================================= */}
 
       <section className="stats-section">
 
@@ -467,20 +541,15 @@ function Header() {
       </section>
 
 
-      {/* ================= POPULAR CATEGORIES ================= */}
+      {/* =================================================
+          POPULAR CATEGORIES
+      ================================================= */}
 
       <section className="categories-section">
 
         <div className="categories-heading">
 
-          <h2>
-            Popular Learning Categories
-          </h2>
-
-          <a href="/">
-            View All Categories
-            <span>→</span>
-          </a>
+          {/* View All Categories later add kar sakte ho */}
 
         </div>
 

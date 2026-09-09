@@ -1,8 +1,10 @@
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -18,98 +20,98 @@ body,
 body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
-  background: #ffffff;
+}
+
+img,
+video {
+  max-width: 100%;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* =====================================================
+   MAIN HEADER
+===================================================== */
 
 .header {
   width: 100%;
-  min-height: 100vh;
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 
-/* =========================
-   LOGO + NAME
-========================= */
+/* =====================================================
+   LOGO HEADER
+===================================================== */
 
 .logo-header {
   position: absolute;
+
   top: 5px;
   left: 30px;
 
   display: flex;
   align-items: center;
-  gap: 0px;
 
   z-index: 20;
 }
 
-.logo-header .logo {
+.logo {
   width: 85px;
   height: 85px;
 
   object-fit: contain;
+
   display: block;
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+
+  margin-left: 5px;
 }
 
 .company-name {
   margin: 0;
-  padding: 0;
-  
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 1.0;
 
   color: #123b6d;
 
-  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 800;
+
+  line-height: 1;
 }
 
 .LiveMentorHub {
-  margin: 3px 0 0;
-  padding: 0;
-
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.0;
+  margin: 4px 0 0;
 
   color: #123b6d;
 
-  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
 }
 
 .tagline {
   margin: 5px 0 0;
-  padding: 0;
-  line-height: 1.0;
-  font-size: 11px;
-  font-weight: 500;
 
   color: #666666;
 
-  white-space: nowrap;
+  font-size: 10px;
+
+  line-height: 1;
 }
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 nav {
+  position: relative;
+
   width: 100%;
   min-height: 85px;
 
@@ -117,15 +119,14 @@ nav {
   align-items: center;
   justify-content: flex-end;
 
-  padding: 0 45px 0 350px;
   gap: 20px;
+
+  padding: 0 40px 0 340px;
 
   background: #ffffff;
 
   border-bottom: 1px solid #eeeeee;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-  position: relative;
   z-index: 10;
 }
 
@@ -138,7 +139,6 @@ nav a {
   font-weight: 500;
 
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 nav a:hover {
@@ -146,9 +146,9 @@ nav a:hover {
 }
 
 
-/* =========================
+/* =====================================================
    SEARCH
-========================= */
+===================================================== */
 
 .search {
   display: flex;
@@ -164,9 +164,9 @@ nav a:hover {
 }
 
 
-/* =========================
-   LOGIN BUTTON
-========================= */
+/* =====================================================
+   LOGIN
+===================================================== */
 
 .login-btn {
   padding: 9px 17px;
@@ -176,7 +176,7 @@ nav a:hover {
 
   color: #2563eb !important;
 
-  transition: 0.2s;
+  white-space: nowrap;
 }
 
 .login-btn:hover {
@@ -185,19 +185,19 @@ nav a:hover {
 }
 
 
-/* =========================
-   SIGN UP BUTTON
-========================= */
+/* =====================================================
+   SIGN
+===================================================== */
 
 .sign-btn {
   padding: 9px 17px;
 
+  border-radius: 5px;
+
   background: #2563eb;
   color: #ffffff !important;
 
-  border-radius: 5px;
-
-  transition: 0.2s;
+  white-space: nowrap;
 }
 
 .sign-btn:hover {
@@ -205,68 +205,89 @@ nav a:hover {
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
-
-/* .hero {
-  width: 100%;
-  min-height: 610px;
-
-  display: flex;
-  align-items: center;
-
-  padding: 55px 7% 65px;
-
-  background: #ffffff;
-} */
-
-.hero-content {
-  width: 55%;
-  max-width: 700px;
-}
-
-/* =========================
-   HERO
-========================= */
+===================================================== */
 
 .hero {
+  position: relative;
+
   width: 100%;
   min-height: 610px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   padding: 55px 5% 65px;
 
-  background: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO BACKGROUND VIDEO
+===================================================== */
+
+.hero-background-video {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   HERO OVERLAY
+===================================================== */
+
+.hero-overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.30);
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 55%;
+  max-width: 700px;
 
   text-align: left;
 }
 
 
-/* =========================
-   HERO CONTENT - LEFT
-========================= */
-
-.hero-content {
-  width: 55%;
-  max-width: 700px;
-
-  text-align: left !important;
-}
-
-
-/* Welcome */
-/* =========================
+/* =====================================================
    WELCOME
-========================= */
+===================================================== */
 
 .hero-content h4 {
   display: inline-block;
 
   margin: 0 0 15px;
+
   padding: 7px 14px;
 
   background: #dff3ff;
@@ -276,51 +297,56 @@ nav a:hover {
 
   font-size: 14px;
   font-weight: 700;
+}
 
-  letter-spacing: 0.5px;
+
+/* =====================================================
+   HERO HEADING
+===================================================== */
+
+.hero-content h1 {
+  margin: 0 0 22px;
+
+  color: #ffffff;
+
+  font-size: 50px;
+
+  line-height: 1.15;
 
   text-align: left;
 }
 
-/* Learn Today + Brighter Tomorrow */
-.hero-content h1 {
-  margin: 0 0 22px;
-
-  color: #222222;
-
-  font-size: 50px;
-  line-height: 1.15;
-
-  text-align: left !important;
-}
-
 .brighter {
-  color: #2563eb;
+  color: #168cff;
 }
 
 
-/* Paragraph */
+/* =====================================================
+   HERO PARAGRAPH
+===================================================== */
+
 .hero-content > p {
   margin: 0;
 
-  color: #666666;
+  color: #ffffff;
 
   font-size: 16px;
+
   line-height: 1.7;
 
-  text-align: left !important;
+  text-align: left;
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
 
 .hero-button {
   display: flex;
 
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 
   gap: 15px;
 
@@ -329,10 +355,13 @@ nav a:hover {
 
 .hero-button button {
   cursor: pointer;
+
+  font-family: inherit;
 }
 
 
-/* Get Started */
+/* GET STARTED */
+
 .get-Started {
   padding: 13px 24px;
 
@@ -347,11 +376,12 @@ nav a:hover {
 }
 
 
-/* Explore */
+/* EXPLORE */
+
 .explore-courses {
   padding: 12px 24px;
 
-  border: 1px solid #2563eb;
+  border: 1px solid #ffffff;
   border-radius: 6px;
 
   background: #ffffff;
@@ -362,129 +392,119 @@ nav a:hover {
 }
 
 
-/* =========================
+/* =====================================================
    FEATURES
-========================= */
+===================================================== */
 
 .features {
-  width: 100%;
-
   display: flex;
 
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
 
-  gap: 25px;
+  gap: 30px;
 
   margin-top: 38px;
-
-  text-align: left;
 }
 
 .Feature-iteam {
-  width: 25%;
+  min-width: 0;
 
-  padding: 0;
+  text-align: left;
 }
 
 .Feature-iteam h3 {
-  margin: 0 0 6px;
+  margin: 0 0 5px;
 
-  color: #222222;
+  color: #ffffff;
 
   font-size: 14px;
-
-  text-align: left;
 }
 
 .Feature-iteam p {
   margin: 0;
 
-  color: #777777;
+  color: #ffffff;
 
   font-size: 13px;
-
-  text-align: left;
 }
 
 
-/* =========================
-   STUDENT IMAGE - RIGHT
-========================= */
-
-.student-image {
-  width: 50%;
-  height: 300px;
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding-left: 20px;
-}
-
-.student-image img {
-  width: 650px;
-  max-width: 100%;
-  height: 666;
-
-  display: block;
-
-  object-fit: cover;
-}
-
-
-/* =========================
+/* =====================================================
    SIX BOX
-========================= */
+===================================================== */
 
 .six-box {
   width: 100%;
 
   display: grid;
 
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 
-  gap: 15px;
+  gap: 14px;
 
-  padding: 35px 45px 45px;
+  padding: 30px 35px;
 
   background: #f8fafc;
 }
 
 
-/* =========================
+/* =====================================================
    ROLE BOX
-========================= */
+===================================================== */
 
 .role-box {
-  width: 100%;
-  min-height: 230px;
+  position: relative;
 
-  padding: 22px 18px;
+  width: 100%;
+  min-height: 240px;
+
+  padding: 25px 12px;
 
   background: #ffffff;
 
   border: 1px solid #e5e7eb;
+
   border-radius: 10px;
 
-  position: relative;
-
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  text-align: center;
 
   overflow: hidden;
 }
 
-.role-logo {
-  width: 45px;
-  height: 45px;
+.role-box:hover {
+  transform: translateY(-3px);
+}
 
-  object-fit: contain;
+
+/* =====================================================
+   ROLE LOGO
+===================================================== */
+
+.role-logo {
+  width: 70px;
+  height: 70px;
 
   display: block;
 
-  margin-bottom: 14px;
+  margin: 0 auto 15px;
+
+  object-fit: contain;
 }
+
+
+/* Student photo - POORI PHOTO DIKHEGI */
+
+.role-box img.role-logo {
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   ROLE HEADING
+===================================================== */
 
 .role-box h3 {
   margin: 0 0 10px;
@@ -494,8 +514,15 @@ nav a:hover {
   font-size: 16px;
 }
 
+
+/* =====================================================
+   ROLE PARAGRAPH
+===================================================== */
+
 .role-box p {
-  margin: 0 0 22px;
+  min-height: 45px;
+
+  margin: 0 0 18px;
 
   color: #666666;
 
@@ -504,13 +531,17 @@ nav a:hover {
   line-height: 1.5;
 }
 
+
+/* =====================================================
+   GET STARTED LINK
+===================================================== */
+
 .role-box a {
   text-decoration: none;
 
   color: #2563eb;
 
   font-size: 13px;
-
   font-weight: 600;
 }
 
@@ -518,25 +549,31 @@ nav a:hover {
   text-decoration: underline;
 }
 
+
+/* =====================================================
+   ARROW
+===================================================== */
+
 .arrow-icon {
   width: 18px;
   height: 18px;
 
   position: absolute;
 
-  right: 18px;
-  bottom: 20px;
+  right: 15px;
+  bottom: 18px;
 
   object-fit: contain;
 }
 
 
-/* =========================
-   BLUE STATS
-========================= */
+/* =====================================================
+   STATS
+===================================================== */
 
 .stats-section {
   width: 100%;
+
   min-height: 145px;
 
   display: grid;
@@ -550,12 +587,17 @@ nav a:hover {
 
   align-items: center;
 
-  padding: 20px 7%;
+  padding: 20px 6%;
 
-  background-color: #104b82;
+  background: #104b82;
 
   color: #ffffff;
 }
+
+
+/* =====================================================
+   STAT ITEM
+===================================================== */
 
 .stat-item {
   min-height: 90px;
@@ -580,11 +622,11 @@ nav a:hover {
   align-items: center;
   justify-content: center;
 
+  margin-bottom: 5px;
+
   border: 2px solid rgba(255, 255, 255, 0.8);
 
   border-radius: 50%;
-
-  margin-bottom: 5px;
 
   font-size: 20px;
 }
@@ -595,12 +637,10 @@ nav a:hover {
   color: #ffffff;
 
   font-size: 24px;
-
-  font-weight: 700;
 }
 
 .stat-item p {
-  margin: 2px 0 0;
+  margin: 3px 0 0;
 
   color: #ffffff;
 
@@ -608,12 +648,12 @@ nav a:hover {
 }
 
 
-/* =========================
+/* =====================================================
    TOMORROW
-========================= */
+===================================================== */
 
 .tomorrow {
-  padding-left: 45px;
+  padding-left: 35px;
 }
 
 .tomorrow h2 {
@@ -621,46 +661,44 @@ nav a:hover {
 
   color: #ffffff;
 
-  font-size: 25px;
-
-  line-height: 1.25;
+  font-size: 24px;
 
   font-weight: 400;
+
+  line-height: 1.3;
 }
 
 .yellow-line {
-  width: 145px;
-  height: 5px;
+  width: 140px;
+  height: 4px;
 
   margin-top: 12px;
 
   background: #f5c542;
 
-  border-radius: 50%;
-
-  transform: rotate(-4deg);
+  border-radius: 5px;
 }
 
 
-/* =========================
-   POPULAR CATEGORIES
-========================= */
+/* =====================================================
+   CATEGORIES
+===================================================== */
 
 .categories-section {
   width: 100%;
 
-  padding: 40px 3.2% 60px;
+  padding: 45px 4% 60px;
 
   background: #ffffff;
 }
 
 .categories-heading {
+  width: 100%;
+
   display: flex;
 
   align-items: center;
   justify-content: space-between;
-
-  margin-bottom: 18px;
 }
 
 .categories-heading h2 {
@@ -677,51 +715,43 @@ nav a:hover {
   color: #1458a0;
 
   font-size: 14px;
-
   font-weight: 600;
 }
 
-.categories-heading a span {
+.categories-heading span {
   margin-left: 7px;
 
   font-size: 20px;
 }
 
 
-/* =========================
+/* =====================================================
    LARGE SCREEN
-========================= */
+===================================================== */
 
 @media (min-width: 1400px) {
 
   nav {
     gap: 25px;
-    padding-right: 60px;
-    padding-left: 360px;
-  }
 
-  nav a {
-    font-size: 14px;
+    padding-left: 370px;
+    padding-right: 55px;
   }
 
   .hero {
-    padding-left: 9%;
+    padding-left: 8%;
     padding-right: 8%;
   }
 
   .hero-content h1 {
     font-size: 54px;
   }
-
-  .student-image img {
-    width: 520px;
-  }
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* =====================================================
+   1200px
+===================================================== */
 
 @media (max-width: 1200px) {
 
@@ -729,104 +759,85 @@ nav a:hover {
     left: 20px;
   }
 
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
   .company-name {
     font-size: 20px;
   }
 
   .LiveMentorHub {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   nav {
     gap: 12px;
 
     padding-left: 280px;
-    padding-right: 25px;
+    padding-right: 20px;
   }
 
   nav a {
-    font-size: 12px;
-  }
-
-  .hero {
-    padding-left: 60px;
-    padding-right: 50px;
+    font-size: 11px;
   }
 
   .hero-content h1 {
     font-size: 43px;
   }
 
-  .student-image img {
-    width: 420px;
-  }
-
   .six-box {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .stats-section {
-    padding-left: 3%;
-    padding-right: 3%;
-  }
-
-  .stat-item {
     padding-left: 15px;
+    padding-right: 15px;
   }
 
-  .tomorrow {
-    padding-left: 25px;
+  .role-box {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .role-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .role-box h3 {
+    font-size: 13px;
+  }
+
+  .role-box p {
+    font-size: 10px;
+  }
+
+  .role-box a {
+    font-size: 10px;
   }
 }
 
 
-/* =========================
-   SMALL TABLET
-========================= */
+/* =====================================================
+   900px
+===================================================== */
 
 @media (max-width: 900px) {
 
   .logo-header {
-    position: absolute;
-    left: 15px;
-    top: 3px;
-  }
-
-  .logo-header .logo {
-    width: 65px;
-    height: 65px;
-  }
-
-  .company-name {
-    font-size: 18px;
-  }
-
-  .LiveMentorHub {
-    font-size: 12px;
-  }
-
-  .tagline {
-    font-size: 9px;
+    left: 12px;
   }
 
   nav {
-    width: 100%;
-
     justify-content: flex-start;
 
     overflow-x: auto;
-    overflow-y: hidden;
 
     white-space: nowrap;
 
-    padding: 10px 15px 10px 270px;
-
-    gap: 14px;
-
     scrollbar-width: none;
+
+    padding-left: 220px;
   }
 
   nav::-webkit-scrollbar {
@@ -835,62 +846,40 @@ nav a:hover {
 
   nav a {
     flex-shrink: 0;
-    font-size: 11px;
   }
 
   .hero {
-    flex-direction: column;
+    min-height: 600px;
 
-    align-items: center;
-
-    text-align: center;
-
-    padding: 50px 35px;
+    padding: 50px 30px;
   }
 
   .hero-content {
     width: 100%;
+
+    max-width: 700px;
   }
 
   .hero-content h1 {
     font-size: 40px;
   }
 
-  .hero-button {
-    justify-content: center;
-  }
-
   .features {
-    justify-content: center;
+    gap: 20px;
   }
 
   .Feature-iteam {
-    width: 48%;
-  }
-
-  .student-image {
-    width: 100%;
-
-    margin-top: 40px;
-
-    padding-left: 0;
-  }
-
-  .student-image img {
-    width: 450px;
-    max-width: 90%;
+    width: 25%;
   }
 
   .six-box {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    padding: 40px 30px;
+    gap: 15px;
   }
 
   .stats-section {
     grid-template-columns: repeat(2, 1fr);
-
-    min-height: auto;
 
     gap: 20px;
 
@@ -907,38 +896,74 @@ nav a:hover {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =====================================================
+   MOBILE 600px
+===================================================== */
 
 @media (max-width: 600px) {
 
+  /* =========================
+     PAGE
+  ========================= */
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: hidden;
+  }
+
   .header {
     width: 100%;
+    max-width: 100%;
+
     overflow-x: hidden;
   }
 
 
-  /* LOGO */
+  /* =========================
+     LOGO
+  ========================= */
 
   .logo-header {
-    left: 10px;
-    top: 5px;
+    position: relative;
 
-    gap: 7px;
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 5px 10px;
+
+    background: #ffffff;
+
+    z-index: 20;
   }
 
-  .logo-header .logo {
+  .logo {
     width: 55px;
     height: 55px;
+
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    margin-left: 5px;
   }
 
   .company-name {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .LiveMentorHub {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .tagline {
@@ -946,12 +971,15 @@ nav a:hover {
   }
 
 
-  /* NAVIGATION */
+  /* =========================
+     NAVBAR
+  ========================= */
 
   nav {
-    width: 100%;
+    position: relative;
 
-    min-height: 70px;
+    width: 100%;
+    min-height: 45px;
 
     display: flex;
 
@@ -959,9 +987,11 @@ nav a:hover {
 
     justify-content: flex-start;
 
-    gap: 12px;
+    gap: 14px;
 
-    padding: 8px 10px 8px 190px;
+    padding: 8px 10px;
+
+    box-sizing: border-box;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -970,7 +1000,8 @@ nav a:hover {
 
     scrollbar-width: none;
 
-    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
   }
 
   nav::-webkit-scrollbar {
@@ -978,23 +1009,15 @@ nav a:hover {
   }
 
   nav a {
-    display: inline-flex;
+    flex: 0 0 auto;
 
-    align-items: center;
-
-    flex-shrink: 0;
-
-    font-size: 10px;
+    font-size: 11px;
 
     white-space: nowrap;
   }
 
-  .login-btn {
-    padding: 7px 10px;
-  }
-
-  .sign-btn {
-    padding: 7px 10px;
+  .search {
+    flex: 0 0 auto;
   }
 
   .search img {
@@ -1002,74 +1025,218 @@ nav a:hover {
     height: 20px;
   }
 
+  .login-btn {
+    flex: 0 0 auto;
 
-  /* HERO */
+    padding: 7px 11px;
+
+    font-size: 11px;
+  }
+
+  .sign-btn {
+    flex: 0 0 auto;
+
+    padding: 7px 11px;
+
+    font-size: 11px;
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
 
   .hero {
-    width: 100%;
+    position: relative;
 
-    min-height: auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 35px 15px 35px;
-  }
-
-  .hero-content {
     width: 100%;
     max-width: 100%;
+
+    min-height: 650px;
+
+    display: block;
+
+    padding: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
   }
+
+
+  /* =========================
+     BACKGROUND VIDEO
+  ========================= */
+
+  .hero-background-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+  }
+
+
+  /* =========================
+     OVERLAY
+  ========================= */
+
+  .hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 1;
+  }
+
+
+  /* =========================
+     HERO CONTENT
+  ========================= */
+
+  .hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    padding: 40px 18px 30px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+  }
+
+
+  /* =========================
+     WELCOME
+  ========================= */
 
   .hero-content h4 {
-    font-size: 11px;
+    display: inline-block;
 
-    letter-spacing: 0.5px;
+    max-width: 100%;
 
-    margin-bottom: 12px;
+    margin: 0 0 15px;
+
+    padding: 7px 12px;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    white-space: normal;
   }
+
+
+  /* =========================
+     HEADING
+  ========================= */
 
   .hero-content h1 {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 18px;
+
     font-size: 28px;
 
-    line-height: 1.25;
+    line-height: 1.22;
 
-    margin-bottom: 18px;
+    text-align: left;
+
+    white-space: normal;
+
+    word-break: normal;
+
+    overflow-wrap: break-word;
   }
 
+  .brighter {
+    display: inline;
+
+    white-space: normal;
+  }
+
+
+  /* =========================
+     PARAGRAPH
+  ========================= */
+
   .hero-content > p {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
     font-size: 12px;
 
     line-height: 1.6;
+
+    text-align: left;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+  }
+
+  .hero-content > p br {
+    display: none;
   }
 
 
-  /* BUTTONS */
+  /* =========================
+     BUTTONS
+  ========================= */
 
   .hero-button {
     width: 100%;
 
-    flex-direction: column;
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 8px;
 
-    margin-top: 22px;
+    margin-top: 20px;
   }
 
-  .get-Started,
-  .explore-courses {
-    width: 190px;
+  .hero-button button {
+    max-width: 100%;
+
+    padding: 10px 13px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
   }
 
 
-  /* FEATURES */
+  /* =========================
+     FEATURES
+  ========================= */
 
   .features {
     width: 100%;
@@ -1078,49 +1245,47 @@ nav a:hover {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 20px 10px;
+    gap: 18px 10px;
 
     margin-top: 28px;
+
+    box-sizing: border-box;
   }
 
   .Feature-iteam {
     width: 100%;
 
-    padding: 0;
+    min-width: 0;
+
+    text-align: left;
   }
 
   .Feature-iteam h3 {
-    font-size: 12px;
+    margin: 0 0 4px;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    text-align: left;
   }
 
   .Feature-iteam p {
-    font-size: 11px;
+    margin: 0;
+
+    font-size: 10px;
+
+    text-align: left;
   }
 
 
-  /* STUDENT IMAGE */
-
-  .student-image {
-    width: 100%;
-
-    margin-top: 30px;
-
-    padding: 0;
-  }
-
-  .student-image img {
-    width: 85%;
-
-    max-width: 320px;
-
-    height: auto;
-  }
-
-
-  /* SIX BOX */
+  /* =========================
+     SIX BOX
+  ========================= */
 
   .six-box {
     width: 100%;
+    max-width: 100%;
 
     display: grid;
 
@@ -1128,22 +1293,91 @@ nav a:hover {
 
     gap: 15px;
 
-    padding: 25px 15px 35px;
+    padding: 25px 15px;
+
+    box-sizing: border-box;
   }
+
+
+  /* =========================
+     ROLE BOX
+  ========================= */
 
   .role-box {
     width: 100%;
+    max-width: 100%;
 
-    min-height: 200px;
+    min-height: 220px;
 
     padding: 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    overflow: hidden;
   }
 
 
-  /* STATS */
+  /* =========================
+     ROLE PHOTO
+  ========================= */
+
+  .role-box .role-logo {
+    width: 85px;
+    height: 85px;
+
+    display: block;
+
+    margin: 0 auto 15px;
+
+    object-fit: contain;
+
+    max-width: 100%;
+  }
+
+
+  /* PHOTO NEVER CUT */
+
+  .role-box img.role-logo {
+    object-fit: contain;
+  }
+
+
+  /* =========================
+     ROLE TEXT
+  ========================= */
+
+  .role-box h3 {
+    font-size: 16px;
+  }
+
+  .role-box p {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  /* =========================
+     ARROW
+  ========================= */
+
+  .role-box .arrow-icon {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+  }
+
+
+  /* =========================
+     STATS
+  ========================= */
 
   .stats-section {
     width: 100%;
+    max-width: 100%;
 
     display: grid;
 
@@ -1151,9 +1385,9 @@ nav a:hover {
 
     gap: 0;
 
-    min-height: auto;
-
     padding: 25px 20px;
+
+    box-sizing: border-box;
   }
 
   .stat-item {
@@ -1167,38 +1401,38 @@ nav a:hover {
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
-    align-items: center;
-
     text-align: center;
+
+    align-items: center;
   }
 
   .tomorrow {
-    grid-column: auto;
+    width: 100%;
 
     padding: 25px 0 10px;
 
     text-align: center;
   }
 
-  .tomorrow h2 {
-    font-size: 22px;
-  }
 
-  .yellow-line {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  /* POPULAR */
+  /* =========================
+     CATEGORIES
+  ========================= */
 
   .categories-section {
     width: 100%;
+    max-width: 100%;
 
-    padding: 30px 18px 45px;
+    padding: 30px 20px 45px;
+
+    box-sizing: border-box;
   }
 
   .categories-heading {
+    width: 100%;
+
+    display: flex;
+
     flex-direction: column;
 
     align-items: flex-start;
@@ -1210,7 +1444,155 @@ nav a:hover {
     font-size: 22px;
   }
 
-  .categories-heading a {
-    font-size: 13px;
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .logo-header {
+    padding-left: 7px;
+    padding-right: 7px;
   }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .company-name {
+    font-size: 15px;
+  }
+
+  .LiveMentorHub {
+    font-size: 9px;
+  }
+
+  .tagline {
+    font-size: 7px;
+  }
+
+  nav {
+    gap: 11px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .hero-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 25px;
+  }
+
+  .hero-content > p {
+    font-size: 11px;
+  }
+
+  .hero-button button {
+    font-size: 10px;
+    padding: 9px 11px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  nav {
+    width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px 10px;
+
+    padding: 10px 8px;
+
+    box-sizing: border-box;
+
+    overflow: visible;
+
+    white-space: normal;
+
+    background: #ffffff;
+  }
+
+  nav a {
+    display: inline-flex;
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+    margin: 0;
+  }
+
+  .search img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .login-btn {
+    padding: 6px 9px;
+    font-size: 9px;
+  }
+
+  .sign-btn {
+    padding: 6px 9px;
+    font-size: 9px;
+  }
+  /* =========================================
+   COURSE IMAGE - FACE / PHOTO FIX
+========================================= */
+
+.course-card img,
+.product-card img,
+.course-image img {
+  width: 100%;
+  height: 220px;
+
+  display: block;
+
+  object-fit: cover;
+
+  /* Face ko center mein rakhega */
+  object-position: center center;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .course-card img,
+  .product-card img,
+  .course-image img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+    object-position: center  top;
+  }
+
+}
+}
+
+/* Professional Mentor logo - slightly bigger */
+.professional-mentor-logo {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain !important;
 }
