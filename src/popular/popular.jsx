@@ -1,4 +1,5 @@
 import "./popular.css";
+import englishLogo from "./english logo.webp";
 
 function Popular() {
   const categories = [
@@ -39,64 +40,66 @@ function Popular() {
       color: "violet",
     },
   ];
+const courses = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+    badge: "♥ LIVE",
+    badgeType: "live",
+    title: "Complete NEET Preparation for Class 11 & 12",
+    teacher: "Dr. Priya Sharma",
+    rating: "4.8 (2.1K)",
+    price: "₹4,999",
+    oldPrice: "₹6,999",
+  },
 
-  const courses = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
-      badge: "♥ LIVE",
-      badgeType: "live",
-      title: "Complete NEET Preparation for Class 11 & 12",
-      teacher: "Dr. Priya Sharma",
-      rating: "4.8 (2.1K)",
-      price: "₹4,999",
-      oldPrice: "₹6,999",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
-      badge: "Bestseller",
-      badgeType: "best",
-      title: "Full Stack Web Development (Frontend to Backend)",
-      teacher: "Amit Verma",
-      rating: "4.7 (1.8K)",
-      price: "₹5,999",
-      oldPrice: "₹8,999",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80",
-      badge: "♥ LIVE",
-      badgeType: "live",
-      title: "Spoken English Masterclass",
-      teacher: "Neha Kapoor",
-      rating: "4.8 (3.2K)",
-      price: "₹1,999",
-      oldPrice: "₹3,999",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
-      badge: "Bestseller",
-      badgeType: "best",
-      title: "Data Science & AI for Beginners",
-      teacher: "Rahul Mehta",
-      rating: "4.6 (1.5K)",
-      price: "₹4,999",
-      oldPrice: "₹7,999",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=600&q=80",
-      badge: "♥ LIVE",
-      badgeType: "live",
-      title: "UPSC Civil Services Foundation",
-      teacher: "Sandeep Singh",
-      rating: "4.8 (2.6K)",
-      price: "₹6,999",
-      oldPrice: "₹9,999",
-    },
-  ];
+  {
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+    badge: "Bestseller",
+    badgeType: "best",
+    title: "Full Stack Web Development (Frontend to Backend)",
+    teacher: "Amit Verma",
+    rating: "4.7 (1.8K)",
+    price: "₹5,999",
+    oldPrice: "₹8,999",
+  },
+
+  {
+    image: englishLogo,
+    badge: "♥ LIVE",
+    badgeType: "live",
+    title: "Spoken English Masterclass",
+    teacher: "Neha Kapoor",
+    rating: "4.8 (3.2K)",
+    price: "₹1,999",
+    oldPrice: "₹3,999",
+  },
+
+  {
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+    badge: "Bestseller",
+    badgeType: "best",
+    title: "Data Science & AI for Beginners",
+    teacher: "Rahul Mehta",
+    rating: "4.6 (1.5K)",
+    price: "₹4,999",
+    oldPrice: "₹7,999",
+  },
+
+  {
+    image:
+      "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=600&q=80",
+    badge: "♥ LIVE",
+    badgeType: "live",
+    title: "UPSC Civil Services Foundation",
+    teacher: "Sandeep Singh",
+    rating: "4.8 (2.6K)",
+    price: "₹6,999",
+    oldPrice: "₹9,999",
+  },
+];
 
   return (
     <div className="popular-page">

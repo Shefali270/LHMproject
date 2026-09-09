@@ -15,22 +15,16 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.header {
-  width: 100%;
   background: #ffffff;
 }
 
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
 
-/* =========================
-   LOGO
-========================= */
+/* LOGO */
 
 .logo {
   width: 75px;
@@ -41,17 +35,14 @@ body {
   top: 5px;
   left: 60px;
 
-  z-index: 10;
+  z-index: 20;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
+/* NAV */
 
 nav {
   width: 100%;
-  height: 85px;
+  min-height: 85px;
 
   display: flex;
   align-items: center;
@@ -63,11 +54,10 @@ nav {
   background: #ffffff;
 
   border-bottom: 1px solid #eeeeee;
-
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
   position: relative;
-  z-index: 5;
+  z-index: 10;
 }
 
 nav a {
@@ -78,12 +68,12 @@ nav a {
   font-weight: 500;
 
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 nav a:hover {
   color: #2563eb;
 }
-
 
 /* SEARCH */
 
@@ -99,34 +89,29 @@ nav a:hover {
   object-fit: contain;
 }
 
-
 /* LOGIN */
 
-nav a:nth-last-child(2) {
+.login-btn {
   padding: 9px 17px;
 
   border: 1px solid #2563eb;
   border-radius: 5px;
 
-  color: #2563eb;
+  color: #2563eb !important;
 }
-
 
 /* SIGN */
 
-nav a:last-child {
+.sign-btn {
   padding: 9px 17px;
 
   background: #2563eb;
-  color: #ffffff;
+  color: #ffffff !important;
 
   border-radius: 5px;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
   width: 100%;
@@ -135,13 +120,14 @@ nav a:last-child {
   display: flex;
   align-items: center;
 
-  padding: 55px 70px 65px 90px;
+  padding: 55px 7% 65px;
 
   background: #ffffff;
 }
 
 .hero-content {
   width: 55%;
+  max-width: 700px;
 }
 
 .hero-content h4 {
@@ -177,14 +163,16 @@ nav a:last-child {
   line-height: 1.7;
 }
 
-
 /* BUTTONS */
 
 .hero-button {
   display: flex;
   gap: 15px;
-
   margin-top: 28px;
+}
+
+.hero-button button {
+  cursor: pointer;
 }
 
 .get-Started {
@@ -213,18 +201,21 @@ nav a:last-child {
   font-weight: 600;
 }
 
-
 /* FEATURES */
 
-.Feature-iteam {
-  display: inline-block;
+.features {
+  width: 100%;
 
-  width: 23%;
+  display: flex;
 
-  vertical-align: top;
+  gap: 15px;
 
   margin-top: 38px;
-  padding-right: 10px;
+}
+
+.Feature-iteam {
+  width: 25%;
+  padding-right: 5px;
 }
 
 .Feature-iteam h3 {
@@ -243,7 +234,6 @@ nav a:last-child {
   font-size: 13px;
 }
 
-
 /* STUDENT IMAGE */
 
 .student-image {
@@ -252,12 +242,13 @@ nav a:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding-left: 20px;
 }
 
 .student-image img {
   width: 500px;
   max-width: 100%;
-
   height: auto;
 
   display: block;
@@ -265,10 +256,7 @@ nav a:last-child {
   object-fit: contain;
 }
 
-
-/* =========================
-   SIX BOX
-========================= */
+/* SIX BOX */
 
 .six-box {
   width: 100%;
@@ -284,7 +272,6 @@ nav a:last-child {
   background: #f8fafc;
 }
 
-
 /* ROLE BOX */
 
 .role-box {
@@ -296,7 +283,6 @@ nav a:last-child {
   background: #ffffff;
 
   border: 1px solid #e5e7eb;
-
   border-radius: 10px;
 
   position: relative;
@@ -357,18 +343,20 @@ nav a:last-child {
   object-fit: contain;
 }
 
-
-/* =================================================
-   BLUE STATS SECTION
-================================================= */
+/* STATS */
 
 .stats-section {
   width: 100%;
-  height: 145px;
+  min-height: 145px;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1.8fr;
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    1fr
+    1.8fr;
 
   align-items: center;
 
@@ -379,11 +367,8 @@ nav a:last-child {
   color: #ffffff;
 }
 
-
-/* STAT */
-
 .stat-item {
-  height: 90px;
+  min-height: 90px;
 
   display: flex;
 
@@ -395,9 +380,6 @@ nav a:last-child {
 
   border-right: 1px solid rgba(255, 255, 255, 0.35);
 }
-
-
-/* ICON */
 
 .stat-icon {
   width: 42px;
@@ -417,9 +399,6 @@ nav a:last-child {
   font-size: 20px;
 }
 
-
-/* NUMBER */
-
 .stat-item h2 {
   margin: 0;
 
@@ -430,9 +409,6 @@ nav a:last-child {
   font-weight: 700;
 }
 
-
-/* TEXT */
-
 .stat-item p {
   margin: 2px 0 0;
 
@@ -441,8 +417,7 @@ nav a:last-child {
   font-size: 13px;
 }
 
-
-/* TOGETHER */
+/* TOMORROW */
 
 .tomorrow {
   padding-left: 45px;
@@ -460,13 +435,6 @@ nav a:last-child {
   font-weight: 400;
 }
 
-.tomorrow strong {
-  font-weight: 700;
-}
-
-
-/* YELLOW LINE */
-
 .yellow-line {
   width: 145px;
   height: 5px;
@@ -480,15 +448,12 @@ nav a:last-child {
   transform: rotate(-4deg);
 }
 
-
-/* =================================================
-   POPULAR CATEGORIES
-================================================= */
+/* POPULAR */
 
 .categories-section {
   width: 100%;
 
-  padding: 25px 3.2% 50px;
+  padding: 40px 3.2% 60px;
 
   background: #ffffff;
 }
@@ -497,7 +462,6 @@ nav a:last-child {
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   margin-bottom: 18px;
@@ -528,9 +492,9 @@ nav a:last-child {
 }
 
 
-/* =================================================
+/* =====================================
    LARGE SCREEN
-================================================= */
+===================================== */
 
 @media (min-width: 1400px) {
 
@@ -544,8 +508,8 @@ nav a:last-child {
   }
 
   .hero {
-    padding-left: 110px;
-    padding-right: 100px;
+    padding-left: 9%;
+    padding-right: 8%;
   }
 
   .hero-content h1 {
@@ -558,9 +522,9 @@ nav a:last-child {
 }
 
 
-/* =================================================
+/* =====================================
    TABLET
-================================================= */
+===================================== */
 
 @media (max-width: 1200px) {
 
@@ -610,24 +574,53 @@ nav a:last-child {
 }
 
 
-/* =================================================
+/* =====================================
    SMALL TABLET
-================================================= */
+===================================== */
 
 @media (max-width: 900px) {
 
   nav {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    padding: 10px 15px 10px 90px;
+
+    gap: 14px;
+
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
     display: none;
   }
 
+  nav a {
+    flex-shrink: 0;
+    font-size: 11px;
+  }
+
   .logo {
-    left: 25px;
+    width: 65px;
+    height: 65px;
+
+    left: 15px;
+    top: 3px;
   }
 
   .hero {
     flex-direction: column;
 
-    align-items: flex-start;
+    align-items: center;
+
+    text-align: center;
 
     padding: 50px 35px;
   }
@@ -636,32 +629,45 @@ nav a:last-child {
     width: 100%;
   }
 
-  .student-image {
-    width: 100%;
-
-    margin-top: 40px;
+  .hero-content h1 {
+    font-size: 40px;
   }
 
-  .student-image img {
-    width: 450px;
+  .hero-button {
+    justify-content: center;
+  }
 
-    max-width: 90%;
+  .features {
+    justify-content: center;
   }
 
   .Feature-iteam {
     width: 48%;
   }
 
+  .student-image {
+    width: 100%;
+
+    margin-top: 40px;
+
+    padding-left: 0;
+  }
+
+  .student-image img {
+    width: 450px;
+    max-width: 90%;
+  }
+
   .six-box {
     grid-template-columns: repeat(2, 1fr);
 
-    padding: 45px 30px;
+    padding: 40px 30px;
   }
 
   .stats-section {
     grid-template-columns: repeat(2, 1fr);
 
-    height: auto;
+    min-height: auto;
 
     gap: 20px;
 
@@ -678,139 +684,295 @@ nav a:last-child {
 }
 
 
-/* =================================================
-   MOBILE
-================================================= */
+/* =====================================
+   iPHONE 14 PRO MAX / MOBILE
+===================================== */
 
 @media (max-width: 600px) {
 
+  .header {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  /* LOGO */
+
+  .logo {
+    width: 58px;
+    height: 58px;
+
+    top: 6px;
+    left: 12px;
+  }
+
+
+  /* NAVIGATION */
+
+  nav {
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    padding: 8px 10px 8px 78px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a {
+    display: inline-flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+  }
+
+  .login-btn {
+    padding: 7px 10px;
+  }
+
+  .sign-btn {
+    padding: 7px 10px;
+  }
+
+  .search img {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  /* HERO */
+
   .hero {
-    padding: 40px 25px;
+    width: 100%;
+
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 35px 15px 35px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-content h4 {
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 12px;
   }
 
   .hero-content h1 {
-    font-size: 35px;
+    font-size: 28px;
+
+    line-height: 1.25;
+
+    margin-bottom: 18px;
   }
 
   .hero-content > p {
-    font-size: 15px;
+    font-size: 12px;
+
+    line-height: 1.6;
   }
 
+
+  /* BUTTONS */
+
   .hero-button {
+    width: 100%;
+
     flex-direction: column;
 
-    align-items: flex-start;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+  }
+
+  .get-Started,
+  .explore-courses {
+    width: 190px;
+  }
+
+
+  /* FEATURES */
+
+  .features {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px 10px;
+
+    margin-top: 28px;
   }
 
   .Feature-iteam {
     width: 100%;
 
-    margin-top: 22px;
+    padding: 0;
+  }
+
+  .Feature-iteam h3 {
+    font-size: 12px;
+  }
+
+  .Feature-iteam p {
+    font-size: 11px;
+  }
+
+
+  /* STUDENT IMAGE */
+
+  .student-image {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 0;
   }
 
   .student-image img {
-    width: 320px;
-  }
+    width: 85%;
 
-  .six-box {
-    grid-template-columns: 1fr;
-
-    padding: 35px 20px;
-  }
-
-  .stats-section {
-    grid-template-columns: 1fr;
+    max-width: 320px;
 
     height: auto;
+  }
 
-    padding: 30px 20px;
+
+  /* SIX BOX */
+
+  .six-box {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 25px 15px 35px;
+  }
+
+  .role-box {
+    width: 100%;
+
+    min-height: 200px;
+
+    padding: 20px;
+  }
+
+
+  /* STATS */
+
+  .stats-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    min-height: auto;
+
+    padding: 25px 20px;
   }
 
   .stat-item {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 18px 0;
+
     border-right: none;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
-    padding: 15px 0;
+    align-items: center;
+
+    text-align: center;
   }
 
   .tomorrow {
     grid-column: auto;
 
-    padding: 20px 0 0;
+    padding: 25px 0 10px;
 
     text-align: center;
   }
-  @media (max-width: 600px) {
 
-  .header {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  .tomorrow h2 {
+    font-size: 22px;
   }
 
-  .hero {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
-    padding: 25px 15px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+  .yellow-line {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .hero-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    text-align: center !important;
+
+  /* POPULAR */
+
+  .categories-section {
+    width: 100%;
+
+    padding: 30px 18px 45px;
   }
 
-  .hero-content h1 {
-    font-size: 28px !important;
+  .categories-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
   }
 
-  .hero-content p {
-    font-size: 12px !important;
-    line-height: 1.5 !important;
+  .categories-heading h2 {
+    font-size: 22px;
   }
 
-  .hero-button {
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
+  .categories-heading a {
+    font-size: 13px;
   }
-
-  .Feature-iteam {
-    width: 100% !important;
-    text-align: center !important;
-    margin: 8px 0 !important;
-  }
-
-  .student-image {
-    width: 100% !important;
-    text-align: center !important;
-    margin-top: 15px !important;
-  }
-
-  .student-image img {
-    width: 85% !important;
-    max-width: 300px !important;
-    height: auto !important;
-  }
-
-  .six-box {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    padding: 20px 15px !important;
-  }
-
-  .role-box {
-    width: 100% !important;
-  }
-}
 }

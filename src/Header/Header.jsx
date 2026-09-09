@@ -5,12 +5,10 @@ import seachLogo from "./seach logo.png";
 import StudentLogoCopy from "./Student logo copy.png";
 import TeacherLog from "./Teacher log.jpg";
 import ArrowIcons from "./Arrow icons.png";
-
 import InstitutionLogo from "./-institution logo.jpg";
 import ProfessionalLogo from "./professional logo.webp";
 import CompanyLogo from "./company logo copy.png";
 import JobLogo from "./job logo copy.png";
-
 
 function Header() {
   return (
@@ -23,7 +21,6 @@ function Header() {
         alt="LHM Project"
         className="logo"
       />
-
 
       {/* ================= NAVIGATION ================= */}
 
@@ -47,7 +44,6 @@ function Header() {
 
         <a href="/">Contact</a>
 
-
         {/* SEARCH */}
 
         <a href="/" className="search">
@@ -57,26 +53,30 @@ function Header() {
           />
         </a>
 
-
         {/* LOGIN */}
 
-        <a href="/">Login</a>
-
+        <a href="/" className="login-btn">
+          Login
+        </a>
 
         {/* SIGN */}
 
-        <a href="/">Sign</a>
+        <a href="/" className="sign-btn">
+          Sign
+        </a>
 
       </nav>
 
 
-      {/* ================= HERO SECTION ================= */}
+      {/* ================= HERO ================= */}
 
       <section className="hero">
 
         <div className="hero-content">
 
-          <h4>WELCOME TO LIVEMENTORHUB</h4>
+          <h4>
+            WELCOME TO LIVEMENTORHUB
+          </h4>
 
           <h1>
             Learn Today
@@ -87,14 +87,11 @@ function Header() {
             </span>
           </h1>
 
-
           <p>
             Your one-stop platform for Learning, mentoring, career growth
             <br />
-
             and real opportunities. Connect with the right people,
             <br />
-
             right resources and the right opportunities-all in one place.
           </p>
 
@@ -116,24 +113,51 @@ function Header() {
 
           {/* FEATURES */}
 
-          <div className="Feature-iteam">
-            <h3>Live & interactive</h3>
-            <p>Classes</p>
-          </div>
+          <div className="features">
 
-          <div className="Feature-iteam">
-            <h3>Explore Mentors</h3>
-            <p>& Teacher</p>
-          </div>
+            <div className="Feature-iteam">
+              <h3>
+                Live & interactive
+              </h3>
 
-          <div className="Feature-iteam">
-            <h3>Learn at Your</h3>
-            <p>Own Pace</p>
-          </div>
+              <p>
+                Classes
+              </p>
+            </div>
 
-          <div className="Feature-iteam">
-            <h3>Career Guidance</h3>
-            <p>& Opportunities</p>
+
+            <div className="Feature-iteam">
+              <h3>
+                Explore Mentors
+              </h3>
+
+              <p>
+                & Teacher
+              </p>
+            </div>
+
+
+            <div className="Feature-iteam">
+              <h3>
+                Learn at Your
+              </h3>
+
+              <p>
+                Own Pace
+              </p>
+            </div>
+
+
+            <div className="Feature-iteam">
+              <h3>
+                Career Guidance
+              </h3>
+
+              <p>
+                & Opportunities
+              </p>
+            </div>
+
           </div>
 
         </div>
@@ -153,12 +177,12 @@ function Header() {
       </section>
 
 
-      {/* ================= SIX BOX SECTION ================= */}
+      {/* ================= SIX BOX ================= */}
 
       <section className="six-box">
 
 
-        {/* 1. STUDENT */}
+        {/* STUDENT */}
 
         <div className="role-box">
 
@@ -189,7 +213,7 @@ function Header() {
         </div>
 
 
-        {/* 2. TEACHER */}
+        {/* TEACHER */}
 
         <div className="role-box">
 
@@ -220,7 +244,7 @@ function Header() {
         </div>
 
 
-        {/* 3. INSTITUTION */}
+        {/* INSTITUTION */}
 
         <div className="role-box">
 
@@ -251,7 +275,7 @@ function Header() {
         </div>
 
 
-        {/* 4. PROFESSIONAL MENTOR */}
+        {/* PROFESSIONAL MENTOR */}
 
         <div className="role-box">
 
@@ -282,7 +306,7 @@ function Header() {
         </div>
 
 
-        {/* 5. COMPANY */}
+        {/* COMPANY */}
 
         <div className="role-box">
 
@@ -313,7 +337,7 @@ function Header() {
         </div>
 
 
-        {/* 6. JOB SEEKER */}
+        {/* JOB SEEKER */}
 
         <div className="role-box">
 
@@ -346,14 +370,10 @@ function Header() {
       </section>
 
 
-      {/* =================================================
-          BLUE STATS SECTION
-      ================================================= */}
+      {/* ================= BLUE STATS ================= */}
 
       <section className="stats-section">
 
-
-        {/* 50K+ */}
 
         <div className="stat-item">
 
@@ -372,8 +392,6 @@ function Header() {
         </div>
 
 
-        {/* 5K+ */}
-
         <div className="stat-item">
 
           <div className="stat-icon">
@@ -390,8 +408,6 @@ function Header() {
 
         </div>
 
-
-        {/* 1K+ */}
 
         <div className="stat-item">
 
@@ -410,8 +426,6 @@ function Header() {
         </div>
 
 
-        {/* 500+ */}
-
         <div className="stat-item">
 
           <div className="stat-icon">
@@ -429,8 +443,6 @@ function Header() {
         </div>
 
 
-        {/* TOGETHER */}
-
         <div className="tomorrow">
 
           <h2>
@@ -446,9 +458,7 @@ function Header() {
       </section>
 
 
-      {/* =================================================
-          POPULAR LEARNING CATEGORIES
-      ================================================= */}
+      {/* ================= POPULAR CATEGORIES ================= */}
 
       <section className="categories-section">
 
@@ -470,6 +480,5 @@ function Header() {
     </div>
   );
 }
-
 
 export default Header;
