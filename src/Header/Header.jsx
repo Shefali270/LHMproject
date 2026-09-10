@@ -51,7 +51,7 @@ function Header() {
 
       {/* ================= NAVIGATION ================= */}
 
-      {/* <nav>
+       <nav>
 
         <a href="/">
           Home
@@ -87,12 +87,12 @@ function Header() {
 
         <a href="/">
           Contact
-        </a> */}
+        </a> 
 
 
         {/* ================= SEARCH ================= */}
 
-        {/* <a
+        <a
           href="/"
           className="search"
         >
@@ -100,29 +100,29 @@ function Header() {
             src={seachLogo}
             alt="Search"
           />
-        </a> */}
+        </a>
 
 
         {/* ================= LOGIN ================= */}
 
-        {/* <a
+        <a
           href="/"
           className="login-btn"
         >
           Login
-        </a> */}
+        </a>
 
 
         {/* ================= SIGN ================= */}
-{/* 
+ 
         <a
           href="/"
-          className="sign-btn"
+         className="sign-btn"
         >
           Sign
         </a>
 
-      </nav> */}
+      </nav> 
 
 
       {/* =================================================

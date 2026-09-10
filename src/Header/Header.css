@@ -1596,3 +1596,25 @@ nav a:hover {
   height: 100px !important;
   object-fit: contain !important;
 }
+/* Desktop par 3-line menu hide */
+.mobile-header-buttons {
+  display: none;
+}
+
+/* Phone par desktop navigation hide */
+@media (max-width: 600px) {
+  .header nav {
+    display: none !important;
+  }
+
+  /* Phone par 3-line menu show */
+  .mobile-header-buttons {
+    display: flex !important;
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+  }
+}
