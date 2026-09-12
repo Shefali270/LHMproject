@@ -7,13 +7,13 @@ import seachLogo from "./seach logo.png";
 import backgroundVideo from "./video.mp4";
 
 // ================= ROLE IMAGES =================
-import student from "./Student logo copy.png";
-import TeacherLog from "./Teacher log.jpg";
-import ArrowIcons from "./Arrow icons.png";
-import InstitutionLogo from "./-institution logo.jpg";
+import Student from "./Student.png";
+import Teacher from "./Teacher.png";
+import ArrowIcons from "./ArrowIcons.png";
+import InstitutionLogo from "./InstitutionLogo.png";
 import ProfessionalLogo from "./professional logo.webp";
-import CompanyLogo from "./company logo copy.png";
-import JobLogo from "./job logo copy.png";
+import CompanyLogo from "./companyLogo.jpg";
+import JobLogo from "./JobLogo.png";
 
 
 function Header() {
@@ -26,7 +26,7 @@ function Header() {
 
         <img
           src={logo}
-          alt="LHM Project"
+          alt="LMH Project"
           className="logo"
         />
 
@@ -51,7 +51,7 @@ function Header() {
 
       {/* ================= NAVIGATION ================= */}
 
-       <nav>
+      <nav>
 
         <a href="/">
           Home
@@ -87,7 +87,7 @@ function Header() {
 
         <a href="/">
           Contact
-        </a> 
+        </a>
 
 
         {/* ================= SEARCH ================= */}
@@ -114,15 +114,15 @@ function Header() {
 
 
         {/* ================= SIGN ================= */}
- 
+
         <a
           href="/"
-         className="sign-btn"
+          className="sign-btn"
         >
           Sign
         </a>
 
-      </nav> 
+      </nav>
 
 
       {/* =================================================
@@ -158,7 +158,6 @@ function Header() {
 
 
           <h1>
-
             Learn Today
 
             <br />
@@ -166,7 +165,6 @@ function Header() {
             <span className="brighter">
               Build a brighter Tomorrow
             </span>
-
           </h1>
 
 
@@ -200,52 +198,56 @@ function Header() {
 
             <div className="Feature-iteam">
 
-              <h3>
-                Live & interactive
-              </h3>
+              <div className="feature-icon blue">
+                <span className="icon-screen"></span>
+              </div>
 
-              <p>
-                Classes
-              </p>
-
-            </div>
-
-
-            <div className="Feature-iteam">
-
-              <h3>
-                Explore Mentors
-              </h3>
-
-              <p>
-                & Teacher
-              </p>
+              <div className="feature-text">
+                <h3>Live & Interactive</h3>
+                <p>Classes</p>
+              </div>
 
             </div>
 
 
             <div className="Feature-iteam">
 
-              <h3>
-                Learn at Your
-              </h3>
+              <div className="feature-icon green">
+                <span className="icon-mentor"></span>
+              </div>
 
-              <p>
-                Own Pace
-              </p>
+              <div className="feature-text">
+                <h3>Expert Mentors</h3>
+                <p>& Teachers</p>
+              </div>
 
             </div>
 
 
             <div className="Feature-iteam">
 
-              <h3>
-                Career Guidance
-              </h3>
+              <div className="feature-icon blue">
+                <span className="icon-chart"></span>
+              </div>
 
-              <p>
-                & Opportunities
-              </p>
+              <div className="feature-text">
+                <h3>Learn at Your</h3>
+                <p>Own Pace</p>
+              </div>
+
+            </div>
+
+
+            <div className="Feature-iteam">
+
+              <div className="feature-icon blue">
+                <span className="icon-career"></span>
+              </div>
+
+              <div className="feature-text">
+                <h3>Career Guidance</h3>
+                <p>& Opportunities</p>
+              </div>
 
             </div>
 
@@ -268,7 +270,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={student}
+            src={Student}
             alt="Student"
             className="role-logo"
           />
@@ -281,15 +283,9 @@ function Header() {
             Learn, grow and build your future
           </p>
 
-          <a href="/">
-            Get Started
+          <a href="#">
+            Get Started <span>→</span>
           </a>
-
-          <img
-            src={ArrowIcons}
-            alt="Arrow"
-            className="arrow-icon"
-          />
 
         </div>
 
@@ -299,7 +295,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={TeacherLog}
+            src={Teacher}
             alt="Teacher"
             className="role-logo"
           />
@@ -312,15 +308,9 @@ function Header() {
             Teach, inspire and earn globally
           </p>
 
-          <a href="/">
-            Get Started
+          <a href="#">
+            Get Started <span>→</span>
           </a>
-
-          <img
-            src={ArrowIcons}
-            alt="Arrow"
-            className="arrow-icon"
-          />
 
         </div>
 
@@ -343,15 +333,9 @@ function Header() {
             Empower your students with quality Learning
           </p>
 
-          <a href="/">
-            Get Started
+          <a href="#">
+            Get Started <span>→</span>
           </a>
-
-          <img
-            src={ArrowIcons}
-            alt="Arrow"
-            className="arrow-icon"
-          />
 
         </div>
 
@@ -374,15 +358,9 @@ function Header() {
             Share Knowledge and make an impact
           </p>
 
-          <a href="/">
-            Get Started
+          <a href="#">
+            Get Started <span>→</span>
           </a>
-
-          <img
-            src={ArrowIcons}
-            alt="Arrow"
-            className="arrow-icon"
-          />
 
         </div>
 
@@ -405,15 +383,9 @@ function Header() {
             Hire talent & upskill your workforce
           </p>
 
-          <a href="/">
-            Get Started
+          <a href="#">
+            Get Started <span>→</span>
           </a>
-
-          <img
-            src={ArrowIcons}
-            alt="Arrow"
-            className="arrow-icon"
-          />
 
         </div>
 
@@ -436,15 +408,9 @@ function Header() {
             Find Opportunities and kickstart your career
           </p>
 
-          <a href="/">
-            Get Started
+          <a href="#">
+            Get Started <span>→</span>
           </a>
-
-          <img
-            src={ArrowIcons}
-            alt="Arrow"
-            className="arrow-icon"
-          />
 
         </div>
 
@@ -549,7 +515,14 @@ function Header() {
 
         <div className="categories-heading">
 
-          {/* View All Categories later add kar sakte ho */}
+          <h2>
+            Popular Learning Categories
+          </h2>
+
+          <a href="#">
+            View All Categories
+            <span>→</span>
+          </a>
 
         </div>
 

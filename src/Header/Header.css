@@ -32,10 +32,19 @@ video {
    MAIN HEADER
 ===================================================== */
 
-.header {
-  width: 100%;
-  background: #ffffff;
-  overflow-x: hidden;
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+  }
+
+  .hero-section {
+    padding-top: 65px;
+  }
 }
 
 
@@ -58,9 +67,7 @@ video {
 .logo {
   width: 85px;
   height: 85px;
-
   object-fit: contain;
-
   display: block;
 }
 
@@ -68,39 +75,34 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  align-items: flex-start;
   margin-left: 5px;
 }
 
 .company-name {
   margin: 0;
-
   color: #123b6d;
-
   font-size: 24px;
   font-weight: 800;
-
   line-height: 1;
+  display:block;
+  margin-left: 0;
 }
 
 .LiveMentorHub {
   margin: 4px 0 0;
-
   color: #123b6d;
-
   font-size: 14px;
   font-weight: 600;
-
   line-height: 1;
+  display: block;
+  margin-left: 0;
 }
 
 .tagline {
   margin: 5px 0 0;
-
   color: #666666;
-
   font-size: 10px;
-
   line-height: 1;
 }
 
@@ -118,31 +120,23 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   gap: 20px;
-
   padding: 0 40px 0 340px;
-
   background: #ffffff;
-
   border-bottom: 1px solid #eeeeee;
-
   z-index: 10;
 }
 
 nav a {
   text-decoration: none;
-
-  color: #333333;
-
+  color: #222;
   font-size: 13px;
-  font-weight: 500;
-
+  font-weight: 800;
   white-space: nowrap;
 }
 
 nav a:hover {
-  color: #2563eb;
+  color: #dadee6;
 }
 
 
@@ -170,12 +164,9 @@ nav a:hover {
 
 .login-btn {
   padding: 9px 17px;
-
-  border: 1px solid #2563eb;
+  border: 1px solid #2857c4;
   border-radius: 5px;
-
-  color: #2563eb !important;
-
+  color: #264ea0 !important;
   white-space: nowrap;
 }
 
@@ -201,7 +192,7 @@ nav a:hover {
 }
 
 .sign-btn:hover {
-  background: #174ea6;
+  background: #2661be;
 }
 
 
@@ -317,7 +308,7 @@ nav a:hover {
 }
 
 .brighter {
-  color: #168cff;
+  color: #eef2f7;
 }
 
 
@@ -573,25 +564,17 @@ nav a:hover {
 
 .stats-section {
   width: 100%;
-
   min-height: 145px;
 
-  display: grid;
-
-  grid-template-columns:
-    1fr
-    1fr
-    1fr
-    1fr
-    1.8fr;
-
+  display: flex;
   align-items: center;
 
-  padding: 20px 6%;
+  padding: 20px 5%;
 
   background: #104b82;
-
   color: #ffffff;
+
+  box-sizing: border-box;
 }
 
 
@@ -600,15 +583,15 @@ nav a:hover {
 ===================================================== */
 
 .stat-item {
+  flex: 1;
   min-height: 90px;
 
   display: flex;
-
   flex-direction: column;
-
+  align-items: center;
   justify-content: center;
 
-  padding-left: 25px;
+  text-align: center;
 
   border-right: 1px solid rgba(255, 255, 255, 0.35);
 }
@@ -618,16 +601,15 @@ nav a:hover {
   height: 42px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   margin-bottom: 5px;
 
   border: 2px solid rgba(255, 255, 255, 0.8);
-
   border-radius: 50%;
 
+  color: #ffffff;
   font-size: 20px;
 }
 
@@ -635,24 +617,24 @@ nav a:hover {
   margin: 0;
 
   color: #ffffff;
-
   font-size: 24px;
+  font-weight: 700;
 }
 
 .stat-item p {
   margin: 3px 0 0;
 
   color: #ffffff;
-
   font-size: 13px;
 }
-
 
 /* =====================================================
    TOMORROW
 ===================================================== */
 
+
 .tomorrow {
+  flex: 1.5;
   padding-left: 35px;
 }
 
@@ -660,11 +642,8 @@ nav a:hover {
   margin: 0;
 
   color: #ffffff;
-
   font-size: 24px;
-
   font-weight: 400;
-
   line-height: 1.3;
 }
 
@@ -675,10 +654,8 @@ nav a:hover {
   margin-top: 12px;
 
   background: #f5c542;
-
   border-radius: 5px;
 }
-
 
 /* =====================================================
    CATEGORIES
@@ -1592,9 +1569,9 @@ nav a:hover {
 
 /* Professional Mentor logo - slightly bigger */
 .professional-mentor-logo {
-  width: 100px !important;
-  height: 100px !important;
-  object-fit: contain !important;
+  width: 100px ;
+  height: 100px ;
+  object-fit: contain ;
 }
 /* Desktop par 3-line menu hide */
 .mobile-header-buttons {
@@ -1617,4 +1594,33 @@ nav a:hover {
     gap: 10px;
     z-index: 100;
   }
+  .box-container {
+  display: flex;
+  gap: 15px;
+}
+
+.box {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.box h3 {
+  margin-bottom: 20px;
+}
+
+.box p {
+  color: gray;
+  height: 60px;
+}
+
+.box a {
+  text-decoration: none;
+  color: #2563eb;
+  display: block;
+  margin-top: 20px;
+}
 }
