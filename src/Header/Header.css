@@ -1,6 +1,12 @@
 /* =====================================================
    RESET
 ===================================================== */
+/* =====================================================
+   RESET
+===================================================== */
+/* =====================================================
+   RESET
+===================================================== */
 
 * {
   margin: 0;
@@ -22,11 +28,14 @@ body {
   overflow-x: hidden;
 }
 
-img,
-video {
-  max-width: 100%;
-}
 
+
+.hero-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: fill;
+}
 
 /* =====================================================
    MAIN HEADER
@@ -54,21 +63,19 @@ video {
 
 .logo-header {
   position: absolute;
-
   top: 5px;
   left: 30px;
-
   display: flex;
   align-items: center;
-
   z-index: 20;
 }
 
 .logo {
-  width: 85px;
-  height: 85px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   display: block;
+  font-size: 20px;
 }
 
 .logo-text {
@@ -81,7 +88,7 @@ video {
 
 .company-name {
   margin: 0;
-  color: #123b6d;
+  color: #072c59;
   font-size: 24px;
   font-weight: 800;
   line-height: 1;
@@ -89,22 +96,34 @@ video {
   margin-left: 0;
 }
 
-.LiveMentorHub {
+/* .LiveMentorHub {
   margin: 4px 0 0;
-  color: #123b6d;
+  color: #093550;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
   display: block;
   margin-left: 0;
+} */
+
+.Live{
+  color: green;
+  font-size: 20px;
+}
+.Mentor{
+  color: rgb(52, 39, 125);
+  font-size: 20px;
 }
 
 .tagline {
   margin: 5px 0 0;
-  color: #666666;
-  font-size: 10px;
+  color: #3e5580;
+  font-size: 12px;
   line-height: 1;
+  transform: translateY(-5px);
+
 }
+
 
 
 /* =====================================================
@@ -113,10 +132,8 @@ video {
 
 nav {
   position: relative;
-
   width: 100%;
   min-height: 85px;
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -153,7 +170,6 @@ nav a:hover {
 .search img {
   width: 23px;
   height: 23px;
-
   object-fit: contain;
 }
 
@@ -166,8 +182,12 @@ nav a:hover {
   padding: 9px 17px;
   border: 1px solid #2857c4;
   border-radius: 5px;
-  color: #264ea0 !important;
+  color: #264ea0;
+  background: #ffffff;
+  width: auto;
+  height: auto;
   white-space: nowrap;
+
 }
 
 .login-btn:hover {
@@ -182,12 +202,9 @@ nav a:hover {
 
 .sign-btn {
   padding: 9px 17px;
-
   border-radius: 5px;
-
-  background: #2563eb;
+  background: #2c853a;
   color: #ffffff !important;
-
   white-space: nowrap;
 }
 
@@ -197,78 +214,50 @@ nav a:hover {
 
 
 /* =====================================================
-   HERO
+   HERO - FINAL FIX
 ===================================================== */
 
 .hero {
   position: relative;
-
   width: 100%;
-  min-height: 610px;
-
+  height: 576px;
+  min-height: 576px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
-  padding: 55px 5% 65px;
-
+  padding: 0;
   overflow: hidden;
+
+  /* Students background image */
+  background-image: url("./screen.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-color: #ffffff;
 }
-
-
-/* =====================================================
-   HERO BACKGROUND VIDEO
-===================================================== */
 
 .hero-background-video {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  z-index: 0;
+  display: none !important;
 }
-
-
-/* =====================================================
-   HERO OVERLAY
-===================================================== */
 
 .hero-overlay {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0, 0, 0, 0.30);
-
-  z-index: 1;
+  display: none !important;
 }
 
-
 /* =====================================================
-   HERO CONTENT
+   HERO CONTENT - LEFT SIDE
 ===================================================== */
 
 .hero-content {
-  position: relative;
-
+  position: absolute;
   z-index: 2;
-
-  width: 55%;
-  max-width: 700px;
-
+  left: 4%;
+  top: 105px;
+  width: 38%;
+  max-width: 570px;
   text-align: left;
+  transform: translateY(-40px);
 }
-
 
 /* =====================================================
    WELCOME
@@ -276,58 +265,50 @@ nav a:hover {
 
 .hero-content h4 {
   display: inline-block;
-
   margin: 0 0 15px;
-
   padding: 7px 14px;
-
   background: #dff3ff;
   color: #2563eb;
-
   border-radius: 20px;
-
-  font-size: 14px;
+  transform:translate(5px) ;
+  font-size: 12px;
   font-weight: 700;
 }
-
 
 /* =====================================================
    HERO HEADING
 ===================================================== */
 
 .hero-content h1 {
-  margin: 0 0 22px;
-
-  color: #ffffff;
-
-  font-size: 50px;
-
+  width: 100%;
+  max-width: 550px;
+  margin: 0 0 18px;
+  color: #0f114a;
+  font-size: 42px;
   line-height: 1.15;
-
   text-align: left;
+  font-weight: 800;
+  white-space: nowrap;
+  
 }
 
 .brighter {
-  color: #eef2f7;
+  color: #4590b6;
 }
-
 
 /* =====================================================
    HERO PARAGRAPH
 ===================================================== */
 
 .hero-content > p {
+  width: 100%;
+  max-width: 500px;
   margin: 0;
-
-  color: #ffffff;
-
-  font-size: 16px;
-
-  line-height: 1.7;
-
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
   text-align: left;
 }
-
 
 /* =====================================================
    HERO BUTTONS
@@ -335,59 +316,43 @@ nav a:hover {
 
 .hero-button {
   display: flex;
-
   align-items: center;
   justify-content: flex-start;
-
   gap: 15px;
-
-  margin-top: 28px;
+  margin-top: 25px;
 }
 
 .hero-button button {
   cursor: pointer;
-
   font-family: inherit;
 }
 
-
-/* GET STARTED */
-
 .get-Started {
   padding: 13px 24px;
-
   border: none;
   border-radius: 6px;
-
-  background: #2563eb;
+  background: #3b7b39;
   color: #ffffff;
-
+  gap: 10px;
   font-size: 14px;
   font-weight: 600;
 }
-
-
-/* EXPLORE */
 
 .explore-courses {
   padding: 12px 24px;
-
-  border: 1px solid #ffffff;
+  border: 1px solid #9caeba;
   border-radius: 6px;
-
   background: #ffffff;
-  color: #2563eb;
-
+  color: #080606;
   font-size: 14px;
   font-weight: 600;
 }
-
 
 /* =====================================================
    FEATURES
 ===================================================== */
 
-.features {
+/* .features {
   display: flex;
 
   align-items: flex-start;
@@ -418,8 +383,94 @@ nav a:hover {
   color: #ffffff;
 
   font-size: 13px;
+} */
+/* =========================
+   FEATURES ROW
+========================= */
+
+.box-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 28px;
+
+  width: 100%;
+
+  margin-top: 28px;
 }
 
+
+/* =========================
+   EACH FEATURE
+========================= */
+
+.Feature-iteam {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.feature-icon {
+  width: 5px;
+  height: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 38px;
+  height: 38px;
+  font-size: 25px;
+  object-fit: contain;
+  left: 5%;
+  display: block;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.feature-text {
+  text-align: left;
+}
+
+.feature-text h3 {
+  margin: 0;
+
+  color: #263746;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.feature-text p {
+  margin: 2px 0 0;
+
+  color: #263746;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  line-height: 1.25;
+}
 
 /* =====================================================
    SIX BOX
@@ -716,12 +767,19 @@ nav a:hover {
   }
 
   .hero {
-    padding-left: 8%;
-    padding-right: 8%;
+    height: 576px;
+    min-height: 576px;
+    padding: 0;
+  }
+
+  .hero-content {
+    left: 5%;
+    top: 105px;
+    width: 38%;
   }
 
   .hero-content h1 {
-    font-size: 54px;
+    font-size: 44px;
   }
 }
 
@@ -760,8 +818,14 @@ nav a:hover {
     font-size: 11px;
   }
 
+  .hero-content {
+    left: 3.5%;
+    top: 95px;
+    width: 40%;
+  }
+
   .hero-content h1 {
-    font-size: 43px;
+    font-size: 36px;
   }
 
   .six-box {
@@ -826,19 +890,22 @@ nav a:hover {
   }
 
   .hero {
-    min-height: 600px;
-
-    padding: 50px 30px;
+    height: 550px;
+    min-height: 550px;
+    padding: 0;
+    background-size: cover;
+    background-position: right center;
   }
 
   .hero-content {
-    width: 100%;
-
-    max-width: 700px;
+    left: 30px;
+    top: 80px;
+    width: 45%;
+    max-width: 500px;
   }
 
   .hero-content h1 {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .features {
@@ -847,6 +914,10 @@ nav a:hover {
 
   .Feature-iteam {
     width: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
   }
 
   .six-box {
@@ -1025,21 +1096,18 @@ nav a:hover {
 
   .hero {
     position: relative;
-
     width: 100%;
     max-width: 100%;
-
     min-height: 650px;
-
+    height: 650px;
     display: block;
-
     padding: 0;
-
     margin: 0;
-
     overflow: hidden;
-
     box-sizing: border-box;
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
   }
 
 
@@ -1623,4 +1691,527 @@ nav a:hover {
   display: block;
   margin-top: 20px;
 }
+
+/* =====================================================
+   MOBILE SCROLL + FIXED HEADER
+===================================================== */
+@media (max-width: 600px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+
+  body {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .hero-section {
+    padding-top: 65px;
+  }
+
+  .mobile-header-buttons {
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    z-index: 1001;
+  }
+  /* .hero {
+  width: 100%;
+  height: 300px;
+  min-height: 300px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: fill; */
+}
+}
+
+/* =====================================================
+   FINAL FEATURE FIX - ONLY REQUESTED CHANGES
+   ===================================================== */
+
+/* Keep feature logo and text on the same line */
+.Feature-iteam {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+}
+
+/* Give the icon its proper space so text cannot move above it */
+.feature-icon {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
+  flex: 0 0 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: static !important;
+}
+
+.feature-icon img {
+  width: 30px !important;
+  height: 30px !important;
+  object-fit: contain !important;
+  display: block !important;
+  position: static !important;
+  margin: 0 !important;
+}
+
+/* Text stays to the right of the icon */
+.feature-text {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+   font-size: 9px !important;
+  line-height: 1.1;
+}
+
+.feature-text h3,
+.feature-text p {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+   font-size: 9px !important;
+  line-height: 1.1;
+}
+
+/* Remove the tiny unwanted image appearing inside the hero paragraph */
+.hero-content > p img {
+  display: none !important;
+}
+
+/* Keep the four feature items inside the left content area */
+/* ================================
+   4 FEATURES - FINAL FIX
+================================ */
+
+.box-row {
+  width: 100% !important;
+  max-width: 760px !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+
+  gap: 18px !important;
+
+  overflow: hidden !important;
+}
+
+.box-row .Feature-iteam {
+  flex: 1 1 0 !important;
+  width: 25% !important;
+  max-width: 25% !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+
+  gap: 7px !important;
+
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+
+/* 4 FEATURE LOGOS */
+.box-row .feature-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+
+  flex: 0 0 32px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.box-row .feature-icon img {
+  width: 32px !important;
+  height: 32px !important;
+
+  object-fit: contain !important;
+  display: block !important;
+}
+
+
+/* TEXT */
+.box-row .feature-text {
+  min-width: 0 !important;
+  max-width: 100% !important;
+
+  overflow: hidden !important;
+  text-align: left !important;
+}
+
+.box-row .feature-text h3 {
+  margin: 0 !important;
+
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+}
+
+.box-row .feature-text p {
+  margin: 2px 0 0 !important;
+
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+
+
+/* ================================
+   HERO LEFT AREA
+================================ */
+
+.hero-content {
+  width: 40% !important;
+  max-width: 590px !important;
+}
+
+
+/* =====================================================
+   FINAL LMH HEADER + 4 FEATURES FIX
+   ===================================================== */
+
+.logo-header {
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.logo-header > .logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+.logo-text .company-name {
+  margin: 0;
+  color: #123f6d;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.logo-text h3 {
+  margin: 3px 0 0;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logo-text .Live {
+  color: #08a35f;
+}
+
+.logo-text .MentorHub {
+  color: #123f6d;
+}
+
+.logo-text .tagline {
+  margin: 5px 0 0;
+  color: #3e5580;
+  font-size: 11px;
+  line-height: 1;
+  transform: none;
+}
+
+nav {
+  padding-left: 320px;
+}
+
+.login-btn {
+  padding: 9px 22px;
+  border: 1px solid #1684c4;
+  border-radius: 6px;
+  color: #1674ae;
+  background: #ffffff;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+}
+
+/* Four features in ONE ROW on desktop */
+.box-row {
+  width: 100%;
+  max-width: 800px;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 22px !important;
+  margin-top: 35px;
+  overflow: visible !important;
+}
+
+.box-row .Feature-iteam {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 9px !important;
+}
+
+.box-row .feature-icon {
+  width: 45px !important;
+  height: 45px !important;
+  min-width: 45px !important;
+  min-height: 45px !important;
+  flex: 0 0 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: static !important;
+}
+
+.box-row .feature-icon img {
+  width: 45px !important;
+  height: 45px !important;
+  object-fit: contain !important;
+  display: block !important;
+  position: static !important;
+  margin: 0 !important;
+}
+
+.box-row .feature-text {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.box-row .feature-text h3,
+.box-row .feature-text p {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.box-row .feature-text h3 {
+  margin: 0 !important;
+  color: #222222 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+}
+
+.box-row .feature-text p {
+  margin: 3px 0 0 !important;
+  color: #333333 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+  .box-row {
+    max-width: 720px;
+    gap: 12px !important;
+  }
+
+  .box-row .Feature-iteam {
+    gap: 6px !important;
+  }
+
+  .box-row .feature-icon,
+  .box-row .feature-icon img {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  .box-row .feature-text h3 {
+    font-size: 11px !important;
+  }
+
+  .box-row .feature-text p {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 65px;
+    padding: 5px 10px;
+  }
+
+  .logo-header > .logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-text .company-name {
+    font-size: 17px;
+  }
+
+  .logo-text h3 {
+    font-size: 10px;
+  }
+
+  .logo-text .tagline {
+    font-size: 8px;
+  }
+
+  .box-row {
+    max-width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 10px !important;
+  }
+
+  .box-row .Feature-iteam {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* =====================================================
+   FINAL SIZE FIX - MATCH REFERENCE IMAGE
+   Smaller LMH logo + compact four feature icons
+===================================================== */
+
+@media (min-width: 601px) {
+  .logo-header {
+    top: 8px;
+    left: 78px;
+  }
+
+  .logo-header > .logo {
+    width: 62px !important;
+    height: 62px !important;
+  }
+
+  .logo-text .company-name {
+    font-size: 27px !important;
+  }
+
+  .logo-text h3 {
+    font-size: 16px ;
+  }
+
+  .logo-text .tagline {
+    font-size: 10px 
+    ;
+    margin-top: 4px 
+    ;
+  }
+
+  .box-row {
+    max-width: 720px 
+    ;
+    gap: 18px 
+    ;
+  }
+
+  .box-row .Feature-iteam {
+    gap: 7px 
+    ;
+  }
+
+  .box-row .feature-icon,
+  .box-row .feature-icon img {
+    width: 32px 
+    ;
+    height: 32px 
+    ;
+    min-width: 32px 
+    ;
+    min-height: 32px 
+    ;
+    flex-basis: 32px 
+    ;
+  }
+
+  .box-row .feature-text h3 {
+    font-size: 12px 
+    ;
+  }
+
+  .box-row .feature-text p {
+    font-size: 11px 
+    ;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-header > .logo {
+    width: 52px 
+    ;
+    height: 52px 
+    ;
+  }
+
+  .logo-text .company-name {
+    font-size: 17px 
+    ;
+  }
+
+  .logo-text h3 {
+    font-size: 10px ;
+  }
+
+  .logo-text .tagline {
+    font-size: 8px ;
+  }
+
+  .box-row .feature-icon,
+  .box-row .feature-icon img {
+    width: 30px ;
+    height: 30px ;
+    min-width: 30px ;
+    min-height: 30px ;
+  }
 }

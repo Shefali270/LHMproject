@@ -4,7 +4,7 @@ import logo from "./splashLogo.png";
 import seachLogo from "./seach logo.png";
 
 // ================= BACKGROUND VIDEO =================
-import backgroundVideo from "./video.mp4";
+import screen from "./screen.jpeg";
 
 // ================= ROLE IMAGES =================
 import Student from "./Student.png";
@@ -14,6 +14,12 @@ import InstitutionLogo from "./InstitutionLogo.png";
 import ProfessionalLogo from "./professional logo.webp";
 import CompanyLogo from "./companyLogo.jpg";
 import JobLogo from "./JobLogo.png";
+import blue from "./blue.jpeg";
+import computerlogo from "./computerlogo.png";
+import darkblue from "./darkblue.jpeg";
+import green from "./green.jpeg";
+
+
 
 
 function Header() {
@@ -35,10 +41,14 @@ function Header() {
           <h2 className="company-name">
             LMH
           </h2>
-
+{/* 
           <h3 className="LiveMentorHub">
             LiveMentorHub
-          </h3>
+          </h3> */}
+<h3>
+  <span className="Live">Live</span><span
+   className="MentorHub">MentorHub</span>
+</h3>
 
           <p className="tagline">
             Learn • Connect • Grow
@@ -119,7 +129,7 @@ function Header() {
           href="/"
           className="sign-btn"
         >
-          Sign
+          Sign Up
         </a>
 
       </nav>
@@ -133,16 +143,22 @@ function Header() {
 
         {/* ================= BACKGROUND VIDEO ================= */}
 
-        <video
+        {/* <video
           className="hero-background-video"
           src={backgroundVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
+          // autoPlay
+          // muted
+          // loop
+          // playsInline
+        /> */}
+
+
+
+         <img
+          src={screen}
+          alt="LMH Project"
+          className="logo"
         />
-
-
         {/* ================= DARK OVERLAY ================= */}
 
         <div className="hero-overlay"></div>
@@ -182,7 +198,7 @@ function Header() {
           <div className="hero-button">
 
             <button className="get-Started">
-              Get Started Today
+              Get Started Today <span> →</span>
             </button>
 
             <button className="explore-courses">
@@ -191,70 +207,77 @@ function Header() {
 
           </div>
 
-
           {/* ================= FEATURES ================= */}
 
-          <div className="features">
+           {/* <div className="features">
 
             <div className="Feature-iteam">
 
               <div className="feature-icon blue">
                 <span className="icon-screen"></span>
-              </div>
+              </div> */}
 
-              <div className="feature-text">
-                <h3>Live & Interactive</h3>
-                <p>Classes</p>
-              </div>
+    <div className="box-row">
 
-            </div>
+  <div className="Feature-iteam">
+    <div className="feature-icon">
+      <img src={computerlogo} alt="Live Classes" />
+    </div>
 
-
-            <div className="Feature-iteam">
-
-              <div className="feature-icon green">
-                <span className="icon-mentor"></span>
-              </div>
-
-              <div className="feature-text">
-                <h3>Expert Mentors</h3>
-                <p>& Teachers</p>
-              </div>
-
-            </div>
+    <div className="feature-text">
+      <h3>Live & Interactive <br/> </h3>
+      <p>Classes</p>
+    </div>
+  </div>
 
 
-            <div className="Feature-iteam">
+  <div className="Feature-iteam">
+    <div className="feature-icon">
+      <img src={green} alt="Expert Mentors" />
+    </div>
 
-              <div className="feature-icon blue">
-                <span className="icon-chart"></span>
-              </div>
-
-              <div className="feature-text">
-                <h3>Learn at Your</h3>
-                <p>Own Pace</p>
-              </div>
-
-            </div>
+    <div className="feature-text">
+      <h3>Expert Mentors <br/> </h3>
+      <p>& Teachers</p>
+    </div>
+  </div>
 
 
-            <div className="Feature-iteam">
+  <div className="Feature-iteam">
+    <div className="feature-icon">
+     <img src={blue} alt="Learn at Your Own Pace" />
+    </div>
 
-              <div className="feature-icon blue">
-                <span className="icon-career"></span>
-              </div>
+    <div className="feature-text">
+      <h3>Learn at Your <br/> </h3>
+      <p>Own Pace</p>
+    </div>
+  </div>
 
-              <div className="feature-text">
-                <h3>Career Guidance</h3>
-                <p>& Opportunities</p>
-              </div>
 
-            </div>
+  <div className="Feature-iteam">
+    <div className="feature-icon">
+      <img src={darkblue} alt="Career Guidance" />
+    </div>
 
-          </div>
+    <div className="feature-text">
+      <h3>Career Guidance <br/></h3>
+      <p>& Opportunities</p>
+    </div>
+  </div>
 
-        </div>
+</div>
 
+
+         {/* <div className="box-row"> 
+            <div className="box">Live & Interactive </r> <span>classes</span></div>
+             <div className="box">Expert Mentors<span>&Teachers</span></div>
+              <div className="box">Learn at your<span>Own Pace</span></div>
+               <div className="box">Career Guidance<span>& Opportunties</span></div>
+          </div> 
+
+        </div> */}
+</div>
       </section>
 
 
@@ -506,27 +529,6 @@ function Header() {
 
       </section>
 
-
-      {/* =================================================
-          POPULAR CATEGORIES
-      ================================================= */}
-
-      <section className="categories-section">
-
-        <div className="categories-heading">
-
-          <h2>
-            Popular Learning Categories
-          </h2>
-
-          <a href="#">
-            View All Categories
-            <span>→</span>
-          </a>
-
-        </div>
-
-      </section>
 
     </div>
   );

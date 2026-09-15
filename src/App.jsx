@@ -5,13 +5,13 @@ import Sidepage from "./Sidepage/Sidepage";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Header />
 
       <Sidepage />
 
       <Popular />
-    </>
+    </div>
   );
 }
 
