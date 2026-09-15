@@ -1,5 +1,8 @@
 import "./popular.css";
 import englishLogo from "./english logo.webp";
+import scanlogo from "./scanlogo.png";
+import logo from "./splashLogo.png";
+
 
 function Popular() {
   const categories = [
@@ -377,18 +380,24 @@ function Popular() {
         </div>
 
 
-        <div className="qr-section">
-
-          <div className="qr-box">
-            <span>▦</span>
-          </div>
+       <div className="qr-section">
+  <div className="qr-box">
+    <img
+      src={scanlogo}
+      alt="scan"
+    />
+    {/* <span>▦</span> */}
+  </div>
 
           <p>
             Scan to Download
           </p>
-
-        </div>
-
+        
+        
+      <div className="learning">
+        Your Learning Companion
+      </div>
+</div>
       </section>
 
 
@@ -431,13 +440,28 @@ function Popular() {
 
           <div className="footer-about">
 
-            <div className="footer-logo">
-              <span className="footer-icon">🎓</span>
+            {/* <div className="footer-logo">
+              <span className="footer-icon"></span>
               <span className="footer-lmh">LMH</span>
-            </div>
+            </div> */}
 
             <div className="footer-brand-text">
-              <h3>LiveMentorHub</h3>
+               <img
+                        src={logo}
+                        alt="LMH Project"
+                        className="logo"
+                      />
+            <h2 className="company-name">
+            LMH
+          </h2>
+
+
+             <h3>
+          <span className="Live">Live</span><span
+              className="MentorHub">MentorHub</span>
+          </h3>
+
+
               <p>Learn • Connect • Grow</p>
             </div>
 

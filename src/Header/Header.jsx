@@ -154,14 +154,18 @@ function Header() {
 
 
 
-         <img
+         {/* <img
           src={screen}
           alt="LMH Project"
           className="logo"
-        />
+        /> */}
         {/* ================= DARK OVERLAY ================= */}
 
         <div className="hero-overlay"></div>
+
+
+
+
 
 
         {/* ================= HERO CONTENT ================= */}
@@ -178,9 +182,8 @@ function Header() {
 
             <br />
 
-            <span className="brighter">
-              Build a brighter Tomorrow
-            </span>
+           <span className="build">Build </span><span
+           className="brighter">Brighter Tomorrow</span>
           </h1>
 
 

@@ -568,41 +568,48 @@ body {
 ========================================= */
 
 .qr-section {
+  display: flex;
+  flex-direction: column;
+   position: relative;
+  right: 90px;
+ 
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .qr-box {
-  width: 88px;
-  height: 88px;
-
-  margin: 0 auto;
-
-  padding: 5px;
-
-  background: #ffffff;
-}
-
-.qr-box span {
-  width: 100%;
-  height: 100%;
-
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  border: 3px solid #111111;
-
-  font-size: 68px;
-  color: #111111;
+.qr-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
 }
 
 .qr-section p {
-  margin: 5px 0 0;
-
+  margin: -8px 0 0;
   font-size: 9px;
   font-weight: 700;
-
   color: #293e52;
+}
+
+.learning {
+   position: absolute;
+  left: 110px;
+  top: 45px;
+  color: #132f50;
+  transform: translate(60px);
+
+  font-family: "Brush Script MT", cursive;
+  font-size: 18px;
+  white-space: nowrap;
 }
 
 /* =========================================
@@ -643,9 +650,9 @@ body {
 
   background: #12ad5c;
   color: #ffffff;
-
-  font-size: 16px;
-  font-weight: 700;
+  
+  font-size: 15px;
+  font-weight: 100;
 
   cursor: pointer;
 }
@@ -662,8 +669,8 @@ body {
 .cta-text {
   width: 190px;
   text-align: center;
-
-  font-size: 17px;
+  font-family:"Brush Script Mt", cursive;
+  font-size: px;
   font-style: italic;
 }
 
@@ -699,25 +706,134 @@ body {
 /* =========================================
    FOOTER LOGO
 ========================================= */
-
-.footer-about {
-  width: 100%;
-}
-
-.footer-logo {
+/* .footer-brand-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* margin-left: 5px; */
 
-.footer-icon {
-  font-size: 34px;
-}
 
-.footer-lmh {
-  font-size: 27px;
-  font-weight: 700;
+/* .footer-brand-text .logo {
+  margin: 0;
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+} 
+
+/* .footer-brand-text h3 {
+  margin: 5px 0;
+  font-size: 20px;
   color: #0759a3;
+}
+
+.footer-brand-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #293e52;
+} */
+ /* .Live{
+  color: green;
+  font-size: 20px;
+}
+.Mentor{
+  color: rgb(52, 39, 125);
+  font-size: 20px;
+}
+.footer-brand-text p{
+  margin: 5px 0 0;
+  color: #3e5580;
+  font-size: 12px;
+  line-height: 1;
+  transform: translateY(-5px);
+
+}  */ */
+
+
+/*====================*/
+
+
+.footer-brand-text {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 8px;
+  align-items: start;
+}
+
+/* Logo left side */
+.footer-brand-text .logo {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin: 0;
+  position: relative;
+  top: 15px;
+}
+
+/* LMH */
+.footer-brand-text .company-name {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  color: #072c59;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  position: relative;
+  transform: translate(-45px);
+  top:-50px;
+
+}
+
+/* LiveMentorHub */
+.footer-brand-text h3 {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 4px 0 0;
+  line-height: 1;
+  position: relative;
+  transform: translate(-12px);
+
+  top: -23px;
+}
+
+.footer-brand-text h3 .Live {
+  color: green;
+  font-size: 16px;
+  position: relative;
+  transform: translate(-12px);
+
+  top: -23px;
+}
+
+.footer-brand-text h3 .MentorHub {
+  color: rgb(52, 39, 125);
+  font-size: 16px;
+  position: relative;
+  transform: translate(-12px);
+
+  top: -23px;
+}
+
+/* Learn • Connect • Grow */
+.footer-brand-text p {
+  grid-column: 2;
+  grid-row: 3;
+  margin: 5px 0 0;
+  color: #3e557f;
+  font-size: 10px;
+  line-height: 1;
+  position: relative;
+  transform: translate(-25px);
+  top: -45px;
 }
 
 

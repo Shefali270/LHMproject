@@ -237,11 +237,11 @@ nav a:hover {
 }
 
 .hero-background-video {
-  display: none !important;
+  display: none ;
 }
 
 .hero-overlay {
-  display: none !important;
+  display: none ;
 }
 
 /* =====================================================
@@ -268,7 +268,8 @@ nav a:hover {
   margin: 0 0 15px;
   padding: 7px 14px;
   background: #dff3ff;
-  color: #2563eb;
+  color: #163b68;
+  font-family: Arial, sans-serif;
   border-radius: 20px;
   transform:translate(5px) ;
   font-size: 12px;
@@ -283,7 +284,7 @@ nav a:hover {
   width: 100%;
   max-width: 550px;
   margin: 0 0 18px;
-  color: #0f114a;
+  color: #163b68;
   font-size: 42px;
   line-height: 1.15;
   text-align: left;
@@ -292,8 +293,13 @@ nav a:hover {
   
 }
 
+build.{
+  color:#163b68
+ 
+}
+
 .brighter {
-  color: #4590b6;
+  color: #2480c6;
 }
 
 /* =====================================================
@@ -391,27 +397,29 @@ nav a:hover {
 .box-row {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-
-  gap: 28px;
-
   width: 100%;
-
   margin-top: 28px;
+  position: relative;
+  top: 25px;
+  flex-wrap: nowrap;
 }
-
+/* .box-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  width: 100%;
+  margin-top: 28px;
+} */
 
 /* =========================
    EACH FEATURE
 ========================= */
-
 .Feature-iteam {
   display: flex;
   align-items: center;
-
-  gap: 9px;
-
-  flex-shrink: 0;
+  gap: 3px;
+  width: 25%;
+  flex: 0 0 25%;
 }
 
 
@@ -420,9 +428,9 @@ nav a:hover {
 ========================= */
 
 .feature-icon {
-  width: 5px;
-  height: 5px;
-
+  width: 3px;
+  height: 3px;
+  top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -436,7 +444,8 @@ nav a:hover {
   font-size: 25px;
   object-fit: contain;
   left: 5%;
-  display: block;
+  top: 30px;
+  display:none;
 }
 
 
@@ -620,7 +629,7 @@ nav a:hover {
   display: flex;
   align-items: center;
 
-  padding: 20px 5%;
+  padding: 15px 5%;
 
   background: #104b82;
   color: #ffffff;
@@ -668,7 +677,7 @@ nav a:hover {
   margin: 0;
 
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -1094,21 +1103,21 @@ nav a:hover {
      HERO
   ========================= */
 
-  .hero {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    min-height: 650px;
-    height: 650px;
-    display: block;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    box-sizing: border-box;
-    background-size: 100% auto;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-  }
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 650px;
+  height: 650px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
 
 
   /* =========================
@@ -1360,7 +1369,7 @@ nav a:hover {
 
     text-align: center;
 
-    overflow: hidden;
+    overflow: visible;
   }
 
 
@@ -1631,7 +1640,6 @@ nav a:hover {
     object-fit: cover;
     object-position: center  top;
   }
-
 }
 }
 
@@ -1649,12 +1657,12 @@ nav a:hover {
 /* Phone par desktop navigation hide */
 @media (max-width: 600px) {
   .header nav {
-    display: none !important;
+    display: none ;
   }
 
   /* Phone par 3-line menu show */
   .mobile-header-buttons {
-    display: flex !important;
+    display: flex ;
     position: absolute;
     top: 18px;
     right: 12px;
@@ -1696,14 +1704,14 @@ nav a:hover {
    MOBILE SCROLL + FIXED HEADER
 ===================================================== */
 @media (max-width: 600px) {
-  html,
+html,
   body,
   #root {
     width: 100%;
     min-height: 100%;
-    height: auto !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
+    height: auto ;
+    overflow-x: auto ;
+    overflow-y: auto ;
   }
 
   body {
@@ -1721,7 +1729,75 @@ nav a:hover {
 
   .hero-section {
     padding-top: 65px;
+  } 
+  /* ================================
+   MOBILE HEADER + PAGE SCROLL
+================================ */
+
+.mobile-header-buttons {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  /* Desktop navigation hide */
+  .header nav {
+    display: none;
   }
+
+  /* 3-line menu show */
+  .mobile-header-buttons {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    align-items: center;
+    gap: 10px;
+    z-index: 1001;
+  }
+
+  /* Header */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Page must scroll */
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+
+  body {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Header ke neeche se hero start */
+  .hero-section {
+    padding-top: 65px;
+  }
+   
+  /* Hero apna separate scrollbar nahi banayega */
+  .hero {
+    overflow: hidden;
+  }
+}
 
   .mobile-header-buttons {
     position: absolute;
@@ -1729,7 +1805,7 @@ nav a:hover {
     right: 12px;
     z-index: 1001;
   }
-  /* .hero {
+  /* /* .hero {
   width: 100%;
   height: 300px;
   min-height: 300px;
@@ -1742,476 +1818,367 @@ nav a:hover {
   height: 300px;
   display: block;
   object-fit: fill; */
-}
-}
-
-/* =====================================================
-   FINAL FEATURE FIX - ONLY REQUESTED CHANGES
-   ===================================================== */
-
-/* Keep feature logo and text on the same line */
-.Feature-iteam {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 6px !important;
-  min-width: 0 !important;
-}
-
-/* Give the icon its proper space so text cannot move above it */
-.feature-icon {
-  width: 38px !important;
-  height: 38px !important;
-  min-width: 38px !important;
-  min-height: 38px !important;
-  flex: 0 0 38px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  position: static !important;
-}
-
-.feature-icon img {
-  width: 30px !important;
-  height: 30px !important;
-  object-fit: contain !important;
-  display: block !important;
-  position: static !important;
-  margin: 0 !important;
-}
-
-/* Text stays to the right of the icon */
-.feature-text {
-  min-width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  text-align: left !important;
-   font-size: 9px !important;
-  line-height: 1.1;
-}
-
-.feature-text h3,
-.feature-text p {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-   font-size: 9px !important;
-  line-height: 1.1;
-}
-
-/* Remove the tiny unwanted image appearing inside the hero paragraph */
-.hero-content > p img {
-  display: none !important;
-}
-
-/* Keep the four feature items inside the left content area */
-/* ================================
-   4 FEATURES - FINAL FIX
-================================ */
-
-.box-row {
-  width: 100% !important;
-  max-width: 760px !important;
-
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-
-  gap: 18px !important;
-
-  overflow: hidden !important;
-}
-
-.box-row .Feature-iteam {
-  flex: 1 1 0 !important;
-  width: 25% !important;
-  max-width: 25% !important;
-
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-
-  gap: 7px !important;
-
-  min-width: 0 !important;
-  overflow: hidden !important;
-}
-
-
-/* 4 FEATURE LOGOS */
-.box-row .feature-icon {
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  max-width: 32px !important;
-
-  flex: 0 0 32px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.box-row .feature-icon img {
-  width: 32px !important;
-  height: 32px !important;
-
-  object-fit: contain !important;
-  display: block !important;
-}
-
-
-/* TEXT */
-.box-row .feature-text {
-  min-width: 0 !important;
-  max-width: 100% !important;
-
-  overflow: hidden !important;
-  text-align: left !important;
-}
-
-.box-row .feature-text h3 {
-  margin: 0 !important;
-
-  font-size: 11px !important;
-  line-height: 1.2 !important;
-
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: clip !important;
-}
-
-.box-row .feature-text p {
-  margin: 2px 0 0 !important;
-
-  font-size: 10px !important;
-  line-height: 1.2 !important;
-
-  white-space: nowrap !important;
-  overflow: hidden !important;
-}
-
-
-/* ================================
-   HERO LEFT AREA
-================================ */
-
-.hero-content {
-  width: 40% !important;
-  max-width: 590px !important;
+} 
 }
 
 
 /* =====================================================
-   FINAL LMH HEADER + 4 FEATURES FIX
+   FINAL CLEAN FIX
+   Header logo + 4 feature logos/text
    ===================================================== */
 
-.logo-header {
-  position: absolute;
-  top: 5px;
-  left: 75px;
-  display: flex;
-  align-items: center;
-  z-index: 20;
-}
-
-.logo-header > .logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  display: block;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 5px;
-}
-
-.logo-text .company-name {
-  margin: 0;
-  color: #123f6d;
-  font-size: 30px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.logo-text h3 {
-  margin: 3px 0 0;
-  line-height: 1;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.logo-text .Live {
-  color: #08a35f;
-}
-
-.logo-text .MentorHub {
-  color: #123f6d;
-}
-
-.logo-text .tagline {
-  margin: 5px 0 0;
-  color: #3e5580;
-  font-size: 11px;
-  line-height: 1;
-  transform: none;
-}
-
-nav {
-  padding-left: 320px;
-}
-
-.login-btn {
-  padding: 9px 22px;
-  border: 1px solid #1684c4;
-  border-radius: 6px;
-  color: #1674ae;
-  background: #ffffff;
-  width: auto;
-  height: auto;
-  white-space: nowrap;
-}
-
-/* Four features in ONE ROW on desktop */
-.box-row {
-  width: 100%;
-  max-width: 800px;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 22px !important;
-  margin-top: 35px;
-  overflow: visible !important;
-}
-
-.box-row .Feature-iteam {
-  flex: 1 1 0 !important;
-  width: auto !important;
-  max-width: none !important;
-  min-width: 0 !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 9px !important;
-}
-
-.box-row .feature-icon {
-  width: 45px !important;
-  height: 45px !important;
-  min-width: 45px !important;
-  min-height: 45px !important;
-  flex: 0 0 45px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  position: static !important;
-}
-
-.box-row .feature-icon img {
-  width: 45px !important;
-  height: 45px !important;
-  object-fit: contain !important;
-  display: block !important;
-  position: static !important;
-  margin: 0 !important;
-}
-
-.box-row .feature-text {
-  min-width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  text-align: left !important;
-}
-
-.box-row .feature-text h3,
-.box-row .feature-text p {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-.box-row .feature-text h3 {
-  margin: 0 !important;
-  color: #222222 !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  line-height: 1.25 !important;
-  white-space: nowrap !important;
-}
-
-.box-row .feature-text p {
-  margin: 3px 0 0 !important;
-  color: #333333 !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  line-height: 1.25 !important;
-  white-space: nowrap !important;
-}
-
-@media (max-width: 1200px) and (min-width: 901px) {
-  .box-row {
-    max-width: 720px;
-    gap: 12px !important;
-  }
-
-  .box-row .Feature-iteam {
-    gap: 6px !important;
-  }
-
-  .box-row .feature-icon,
-  .box-row .feature-icon img {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-  }
-
-  .box-row .feature-text h3 {
-    font-size: 11px !important;
-  }
-
-  .box-row .feature-text p {
-    font-size: 10px !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo-header {
+/* HEADER LOGO */
+@media (min-width: 601px) {
+  .header {
     position: relative;
-    top: auto;
-    left: auto;
+  }
+
+  .header .logo-header {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    right: auto;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+  }
+
+  .header .logo-header > .logo {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .header .logo-header .logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 4px;
+    padding: 0;
+  }
+
+  .header .logo-header .company-name {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .header .logo-header .Live,
+  .header .logo-header .Mentor,
+  .header .logo-header .MentorHub {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .header .logo-header .tagline {
+    margin: 3px 0 0;
+    font-size: 10px;
+    line-height: 1;
+    transform: none;
+  }
+}
+
+/* FOUR FEATURES - ONE ROW, SMALL GAP */
+@media (min-width: 901px) {
+  .hero-content .box-row {
+    width: 610px;
+    max-width: 610px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    margin-top: 28px;
+    overflow: visible;
+  }
+
+  .hero-content .box-row .Feature-iteam {
+    width: 152.5px;
+    min-width: 152.5px;
+    max-width: 152.5px;
+    flex: 0 0 152.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-content .box-row .feature-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    flex: 0 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-content .box-row .feature-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    position: static;
+    margin: 0;
+  }
+
+  .hero-content .box-row .feature-text {
+    width: 117.5px;
+    min-width: 0;
+    max-width: 117.5px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    overflow: visible;
+  }
+
+  .hero-content .box-row .feature-text h3 {
     width: 100%;
-    height: 65px;
-    padding: 5px 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: normal;
   }
 
-  .logo-header > .logo {
-    width: 55px;
-    height: 55px;
+  .hero-content .box-row .feature-text p {
+    width: 100%;
+    margin: 2px 0 0;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    white-space: normal;
+  }
+}
+
+/* 901px-1200px */
+@media (max-width: 1200px) and (min-width: 901px) {
+  .hero-content .box-row {
+    width: 600px;
+    max-width: 600px;
   }
 
-  .logo-text .company-name {
-    font-size: 17px;
+  .hero-content .box-row .Feature-iteam {
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    flex-basis: 150px;
   }
 
-  .logo-text h3 {
+  .hero-content .box-row .feature-text {
+    width: 115px;
+    max-width: 115px;
+  }
+
+  .hero-content .box-row .feature-text h3 {
     font-size: 10px;
   }
 
-  .logo-text .tagline {
+  .hero-content .box-row .feature-text p {
+    font-size: 9px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .header .logo-header {
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: 5px;
+    width: 100%;
+    height: 65px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header .logo-header > .logo {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+  }
+
+  .header .logo-header .logo-text {
+    margin-left: 4px;
+  }
+
+  .header .logo-header .company-name {
+    font-size: 17px;
+  }
+
+  .header .logo-header .Live,
+  .header .logo-header .Mentor,
+  .header .logo-header .MentorHub {
+    font-size: 10px;
+  }
+
+  .header .logo-header .tagline {
+    margin-top: 2px;
     font-size: 8px;
   }
 
-  .box-row {
+  .hero-content .box-row {
+    width: 100%;
     max-width: 100%;
-    display: grid !important;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px 10px !important;
+    gap: 12px 8px;
+    overflow: visible;
   }
 
-  .box-row .Feature-iteam {
-    width: 100% !important;
-    max-width: 100% !important;
+  .hero-content .box-row .Feature-iteam {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
   }
+
+ .hero-content .box-row .feature-icon,
+  .hero-content .box-row .feature-icon img {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  } 
+
+  .hero-content .box-row .feature-text h3 {
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .hero-content .box-row .feature-text p {
+    font-size: 9px;
+    white-space: normal;
+  }
+  /* ================================
+   PAGE SCROLL FIX
+================================ */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden ;
+  overflow-y: auto ;
 }
 
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden ;
+  overflow-y: auto ;
+}
 
-/* =====================================================
-   FINAL SIZE FIX - MATCH REFERENCE IMAGE
-   Smaller LMH logo + compact four feature icons
-===================================================== */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden ;
+  overflow-y: visible ;
+}
 
-@media (min-width: 601px) {
-  .logo-header {
-    top: 8px;
-    left: 78px;
-  }
+/* Header ko page scroll se block nahi karna */
+.header {
+  width: 100%;
+  overflow-x: visible ;
+  overflow-y: visible ;
+}
 
-  .logo-header > .logo {
-    width: 62px !important;
-    height: 62px !important;
-  }
-
-  .logo-text .company-name {
-    font-size: 27px !important;
-  }
-
-  .logo-text h3 {
-    font-size: 16px ;
-  }
-
-  .logo-text .tagline {
-    font-size: 10px 
-    ;
-    margin-top: 4px 
-    ;
-  }
-
-  .box-row {
-    max-width: 720px 
-    ;
-    gap: 18px 
-    ;
-  }
-
-  .box-row .Feature-iteam {
-    gap: 7px 
-    ;
-  }
-
-  .box-row .feature-icon,
-  .box-row .feature-icon img {
-    width: 32px 
-    ;
-    height: 32px 
-    ;
-    min-width: 32px 
-    ;
-    min-height: 32px 
-    ;
-    flex-basis: 32px 
-    ;
-  }
-
-  .box-row .feature-text h3 {
-    font-size: 12px 
-    ;
-  }
-
-  .box-row .feature-text p {
-    font-size: 11px 
-    ;
-  }
+/* Hero ke andar horizontal overflow hi hide rahe */
+.hero {
+  overflow-x: hidden ;
+  overflow-y: visible ;
 }
 
 @media (max-width: 600px) {
-  .logo-header > .logo {
-    width: 52px 
-    ;
-    height: 52px 
-    ;
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
-  .logo-text .company-name {
-    font-size: 17px 
-    ;
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
   }
 
-  .logo-text h3 {
-    font-size: 10px ;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
-  .logo-text .tagline {
-    font-size: 8px ;
+  .hero-section {
+    padding-top: 65px;
   }
 
-  .box-row .feature-icon,
-  .box-row .feature-icon img {
-    width: 30px ;
-    height: 30px ;
-    min-width: 30px ;
-    min-height: 30px ;
+  .hero {
+    height: auto;
+    min-height: 650px;
+    overflow: visible;
   }
+}
+/* PHONE ONLY - PAGE SCROLL */
+
+@media (max-width: 600px) {
+
+  html,
+  body {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+  }
+
+  .header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 650px;
+    overflow: hidden;
+  }
+
+  .six-box {
+    height: auto;
+  }
+
+  .stats-section {
+    height: auto;
+  }
+}
+
 }

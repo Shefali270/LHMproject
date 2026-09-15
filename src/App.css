@@ -13,25 +13,29 @@ body,
   min-height: 100%;
   margin: 0;
   padding: 0;
+}
 
-  /* IMPORTANT */
-  height: auto ;
-  overflow-x: hidden ;
-  overflow-y: auto ;
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  overflow-y: auto ;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: static;
+}
+
+#root {
+  min-height: 100vh;
+  height: auto;
+  overflow: visible;
+  position: static;
 }
 
 .app-container {
   width: 100%;
   min-height: 100vh;
-
-  height: auto ;
-
-  overflow-x: hidden ;
-  overflow-y: visible ;
+  height: auto;
+  overflow: visible;
 }
