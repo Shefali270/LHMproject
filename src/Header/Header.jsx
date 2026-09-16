@@ -16,7 +16,7 @@ import ArrowIcons from "./ArrowIcons.png";
 import InstitutionLogo from "./InstitutionLogo.png";
 import ProfessionalLogo from "./professional logo.webp";
 import CompanyLogo from "./companyLogo.jpg";
-import JobLogo from "./JobLogo.png";
+import JobLogo from "./jobLogo.png";
 import blue from "./blue.jpeg";
 import computerlogo from "./computerlogo.png";
 import darkblue from "./darkblue.jpeg";
