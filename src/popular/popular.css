@@ -12,7 +12,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #ffffff;
-  color: #132f50;
+  color: #072c59;
 }
 
 .popular-page {
@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
   height: auto;
   background: #ffffff;
-  color: #132f50;
+  color: #072c59;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   overflow-y: visible;
@@ -41,13 +41,13 @@ body {
 
 .section-heading h2 {
   margin: 0;
-  color: #0759a3;
+ color: #072c59;
   font-size: 24px;
   font-weight: 700;
 }
 
 .section-heading a {
-  color: #0759a3;
+  color: #072c59;
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
@@ -135,12 +135,15 @@ body {
   margin: 0 0 5px;
   font-size: 15px;
   line-height: 1.2;
+   text-align: left;
   color: #172f4d;
+  
 }
 
 .category-card p {
   margin: 0;
   font-size: 12px;
+   text-align: left;
   line-height: 1.3;
   color: #263d54;
 }
@@ -175,6 +178,9 @@ body {
   border-radius: 8px;
 
   overflow: hidden;
+   width: 100% ;
+  text-align: left ;
+  align-self: stretch ;
 
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
 
@@ -567,45 +573,50 @@ body {
    QR
 ========================================= */
 
-.qr-section {
-  display: flex;
-  flex-direction: column;
-   position: relative;
-  right: 90px;
- 
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
-.qr-box {
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .qr-section {
+    position: relative;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-.qr-box img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  display: block;
-}
+  .qr-box {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.qr-section p {
-  margin: -8px 0 0;
-  font-size: 9px;
-  font-weight: 700;
-  color: #293e52;
-}
+  .qr-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transform: translate(-95px);
+    display: block;
+   }
+
+  .qr-section p {
+    margin: -8px 0 0;
+    font-size: 9px;
+    font-weight: 700;
+    color: #293e52;
+    transform: translate(-95px);
+  }
+
 
 .learning {
    position: absolute;
   left: 110px;
   top: 45px;
   color: #132f50;
-  transform: translate(60px);
+  transform: translate(-35px);
 
   font-family: "Brush Script MT", cursive;
   font-size: 18px;
@@ -783,7 +794,8 @@ body {
   grid-column: 2;
   grid-row: 1;
   margin: 0;
-  color: #072c59;
+   color: #072c59;
+
   font-size: 24px;
   font-weight: 800;
   line-height: 1;
@@ -815,20 +827,20 @@ body {
 }
 
 .footer-brand-text h3 .MentorHub {
-  color: rgb(52, 39, 125);
-  font-size: 16px;
+color: #072c59;  
+ font-size: 16px;
   position: relative;
   transform: translate(-12px);
 
   top: -23px;
 }
 
-/* Learn • Connect • Grow */
-.footer-brand-text p {
+/* Learn • Connect • Grow */ 
+ .footer-brand-text p {
   grid-column: 2;
   grid-row: 3;
   margin: 5px 0 0;
-  color: #3e557f;
+   color:#072c59;
   font-size: 10px;
   line-height: 1;
   position: relative;
@@ -859,7 +871,7 @@ body {
   margin: 3px 0 0;
 
   font-size: 8px;
-  color: #159447;
+  color:#072c59;
 
   font-weight: 700;
 }
@@ -1129,16 +1141,67 @@ body {
   .store-buttons {
     justify-content: center;
   }
-
+@media (max-width: 600px) {
   .qr-section {
-    display: block;
+    position: relative;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 120px 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+
+  .qr-box {
+    grid-column: 1;
+    grid-row: 1;
+    width: 120px;
+    height: 120px;
+  }
+
+  .qr-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    transform: none;
+  }
+
+  .learning {
+    grid-column: 2;
+    grid-row: 1;
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-left: 5px;
+    font-family: "Brush Script MT", cursive;
+    font-size: 18px;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .qr-section p {
+    grid-column: 1;
+    grid-row: 2;
+    margin: -5px 0 0;
+    font-size: 9px;
+    font-weight: 700;
+    color: #293e52;
+    text-align: center;
+    transform: none;
+  }
+}
 
   .cta-section {
     flex-direction: column;
 
     text-align: center;
-
+   
     padding: 25px 15px;
 
     gap: 15px;
@@ -1245,7 +1308,7 @@ body {
   font-size: 25px;
   font-weight: 700;
   line-height: 1;
-  color: #00579c;
+ color: #072c59;
 }
 
 .LiveMentorHub {
@@ -1258,7 +1321,7 @@ body {
 
   margin-left: 50px;
 
-  color: #00579c;
+  color: #072c59;
   white-space: nowrap;
 }
 
@@ -1269,7 +1332,7 @@ body {
   font-size: 7px;
   font-weight: 600;
   line-height: 1.2;
-  color: green;
+  color: #072c59;
 }
 }
 

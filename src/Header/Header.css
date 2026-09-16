@@ -74,7 +74,7 @@ body {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  display: block;
+  display:flex;
   font-size: 20px;
 }
 
@@ -111,16 +111,17 @@ body {
   font-size: 20px;
 }
 .Mentor{
-  color: rgb(52, 39, 125);
+  color: #072c59;
   font-size: 20px;
 }
 
 .tagline {
   margin: 5px 0 0;
-  color: #3e5580;
+  color:#072c59;
   font-size: 12px;
   line-height: 1;
   transform: translateY(-5px);
+  white-space: nowrap;
 
 }
 
@@ -146,9 +147,9 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #222;
+  color: #313030;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 750;
   white-space: nowrap;
 }
 
@@ -293,15 +294,13 @@ nav a:hover {
   
 }
 
-build.{
-  color:#163b68
- 
+.build {
+  color: #163b68;
 }
 
 .brighter {
   color: #2480c6;
 }
-
 /* =====================================================
    HERO PARAGRAPH
 ===================================================== */
@@ -394,15 +393,11 @@ build.{
    FEATURES ROW
 ========================= */
 
-.box-row {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-top: 28px;
-  position: relative;
-  top: 25px;
-  flex-wrap: nowrap;
-}
+/* .box-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+} */
 /* .box-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -414,20 +409,20 @@ build.{
 /* =========================
    EACH FEATURE
 ========================= */
-.Feature-iteam {
+/* .Feature-iteam {
   display: flex;
   align-items: center;
   gap: 3px;
   width: 25%;
   flex: 0 0 25%;
-}
+} */
 
 
 /* =========================
    ICON
 ========================= */
 
-.feature-icon {
+/* .feature-icon {
   width: 3px;
   height: 3px;
   top: 30px;
@@ -445,9 +440,57 @@ build.{
   object-fit: contain;
   left: 5%;
   top: 30px;
-  display:none;
+  display:block;
+} */
+.box-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
 }
 
+.Feature-iteam {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  flex: none;
+}
+
+.feature-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+}
+
+.feature-text {
+  text-align: left;
+}
+
+.feature-text h3 {
+  margin: 0;
+  color: #263746;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.feature-text p {
+  margin: 2px 0 0;
+  color: #263746;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+}
 
 /* =========================
    TEXT
@@ -561,7 +604,7 @@ build.{
   margin: 0 0 10px;
 
   color: #222222;
-
+  
   font-size: 16px;
 }
 
@@ -574,9 +617,9 @@ build.{
   min-height: 45px;
 
   margin: 0 0 18px;
-
+   
   color: #666666;
-
+ 
   font-size: 13px;
 
   line-height: 1.5;
@@ -633,7 +676,7 @@ build.{
 
   background: #104b82;
   color: #ffffff;
-
+  transform: translate(-10px);
   box-sizing: border-box;
 }
 
@@ -939,7 +982,7 @@ build.{
     grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
-
+    transform: translate(-5px);
     padding: 30px;
   }
 
@@ -1038,7 +1081,7 @@ build.{
     width: 100%;
     min-height: 45px;
 
-    display: flex;
+    display:none;
 
     align-items: center;
 
@@ -1886,21 +1929,22 @@ html,
   .hero-content .box-row {
     width: 610px;
     max-width: 610px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-direction: unset;
+    flex-wrap: unset;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0;
+    justify-content: unset;
+    gap: 22px;
     margin-top: 28px;
     overflow: visible;
   }
 
   .hero-content .box-row .Feature-iteam {
-    width: 152.5px;
-    min-width: 152.5px;
-    max-width: 152.5px;
-    flex: 0 0 152.5px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1993,42 +2037,69 @@ html,
 
 /* MOBILE */
 @media (max-width: 600px) {
+@media (max-width: 600px) {
+
   .header .logo-header {
     position: fixed;
-    top: auto;
-    left: auto;
-    right: 5px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 65px;
     padding: 5px 10px;
     display: flex;
     align-items: center;
+    background: white;
+    z-index: 1000;
   }
 
   .header .logo-header > .logo {
     width: 52px;
     height: 52px;
     flex-shrink: 0;
+    object-fit: contain;
   }
 
   .header .logo-header .logo-text {
-    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 6px;
+    padding: 0;
+    gap: 2px;
   }
 
   .header .logo-header .company-name {
+    margin: 0;
+    padding: 0;
     font-size: 17px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .header .logo-header .logo-text h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    line-height: 1;
+    white-space: nowrap;
   }
 
   .header .logo-header .Live,
-  .header .logo-header .Mentor,
   .header .logo-header .MentorHub {
     font-size: 10px;
   }
 
   .header .logo-header .tagline {
-    margin-top: 2px;
+    margin: 0;
+    padding: 0;
     font-size: 8px;
+    line-height: 1;
+    transform: none;
+    white-space: nowrap;
   }
+
+}
 
   .hero-content .box-row {
     width: 100%;
@@ -2180,5 +2251,245 @@ body {
     height: auto;
   }
 }
+@media (max-width: 600px) {
 
+  .header nav {
+    display: none;
+  }
+
+  .mobile-header-buttons {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    align-items: center;
+    gap: 10px;
+    z-index: 1001;
+  }
+.mobile-search-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.mobile-search-btn img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.menu-btn {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: #163b68;
+  padding: 0;
+}
+@media (max-width: 600px) {
+
+  .mobile-header-buttons {
+    display: flex !important;
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+  }
+
+  .menu-btn {
+    display: block ;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    color: #163b68;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+
+  /* menu normally hidden */
+  .header nav {
+    display: none ;
+  }
+
+  /* 3 line click karne par menu open */
+  .header nav.mobile-menu-open {
+    display: flex ;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: white;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px;
+    gap: 15px;
+
+    z-index: 9998;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .header nav.mobile-menu-open a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+}
+@media (max-width: 600px) {
+
+  .header nav {
+    display: none ;
+  }
+
+  .header nav.mobile-menu-open {
+    display: flex ;
+      position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    z-index: 9998;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .header nav.mobile-menu-open a {
+    display: block;
+    width: 100%;
+  }
+}
+
+}
+}
+
+
+/* 4 BOX - PHONE POSITION + 2x2 */
+@media (max-width: 600px) {
+  .hero-content .box-row {
+    display: grid ;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) ;
+    gap: 12px 8px ;
+    width: 100% ;
+    max-width: 100% ;
+    margin-top: 28px ;
+    position: relative ;
+    top: auto ;
+  }
+
+  .hero-content .box-row .Feature-iteam {
+    width: 100% ;
+    min-width: 0 ;
+    max-width: 100% !;
+    flex: none ;
+  }
+}
+
+/* 4 BOX - LAPTOP 2x2 */
+@media (min-width: 601px) {
+  .hero-content .box-row {
+    display: grid ;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) ;
+    gap: 22px ;
+    width: 100% ;
+    max-width: 610px ;
+    margin-top: 28px ;
+  }
+
+  .hero-content .box-row .Feature-iteam {
+    width: 100% ;
+    min-width: 0 ;
+    max-width: 100% ;
+    flex: none ;
+  }
+}
+
+
+/* BOX TEXT - START FROM LEFT */
+.box {
+  text-align: left ;
+}
+
+.box h3,
+.box p,
+.box a {
+  text-align: left ;
+}
+
+/* =====================================================
+   MOBILE MENU - FINAL FIX ONLY
+===================================================== */
+@media (max-width: 600px) {
+  .header nav.mobile-menu-open {
+    display: flex ;
+    position: fixed ;
+    top: 65px ;
+    right: 0 ;
+    left: auto ;
+    width: 280px ;
+    max-width: 85vw ;
+    height: calc(100vh - 65px) ;
+    max-height: calc(100vh - 65px) ;
+    overflow-y: auto ;
+    overflow-x: hidden ;
+    flex-direction: column ;
+    align-items: stretch ;
+    justify-content: flex-start ;
+    padding: 15px 14px 20px ;
+    gap: 0 ;
+    background: #ffffff ;
+    box-shadow: -4px 4px 14px rgba(0,0,0,0.15) ;
+    z-index: 9998 ;
+  }
+
+  .header nav.mobile-menu-open > a {
+    display: flex ;
+    align-items: center ;
+    justify-content: flex-start ;
+    width: 100% ;
+    min-height: 48px ;
+    padding: 12px 10px ;
+    color: #000000 ;
+    font-size: 14px ;
+    font-weight: 500 ;
+    text-decoration: none ;
+    white-space: nowrap ;
+    border-bottom: 1px solid #eeeeee ;
+    box-sizing: border-box ;
+  }
+
+  .header nav.mobile-menu-open > a.search {
+    display: none ;
+  }
+
+  .header nav.mobile-menu-open > a.login-btn,
+  .header nav.mobile-menu-open > a.sign-btn {
+    justify-content: center ;
+    margin-top: 10px ;
+    min-height: 42px ;
+    border-radius: 5px ;
+    border-bottom: none ;
+    box-sizing: border-box ;
+  }
+
+  .header nav.mobile-menu-open > a.login-btn {
+    color: #000000 ;
+    background: #ffffff ;
+    border: 1px solid #2857c4 ;
+  }
+
+  .header nav.mobile-menu-open > a.sign-btn {
+    color: #ffffff ;
+    background: #2c853a ;
+    border: 1px solid #2c853a ;
+  }
 }

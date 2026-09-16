@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Header.css";
 
 import logo from "./splashLogo.png";
@@ -23,6 +24,7 @@ import green from "./green.jpeg";
 
 
 function Header() {
+   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="header">
 
@@ -57,11 +59,26 @@ function Header() {
         </div>
 
       </div>
+{/* PHONE MENU */}
+<div className="mobile-header-buttons">
+
+  <button className="mobile-search-btn">
+    <img src={seachLogo} alt="Search" />
+  </button>
+
+ <button
+  className="menu-btn"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  ☰
+</button>
+
+</div>
 
 
       {/* ================= NAVIGATION ================= */}
 
-      <nav>
+<nav className={menuOpen ? "mobile-menu-open" : ""}>
 
         <a href="/">
           Home
@@ -98,7 +115,6 @@ function Header() {
         <a href="/">
           Contact
         </a>
-
 
         {/* ================= SEARCH ================= */}
 
@@ -164,10 +180,6 @@ function Header() {
         <div className="hero-overlay"></div>
 
 
-
-
-
-
         {/* ================= HERO CONTENT ================= */}
 
         <div className="hero-content">
@@ -182,7 +194,7 @@ function Header() {
 
             <br />
 
-           <span className="build">Build </span><span
+           <span className="build">Build a </span><span
            className="brighter">Brighter Tomorrow</span>
           </h1>
 
