@@ -717,58 +717,6 @@ body {
 /* =========================================
    FOOTER LOGO
 ========================================= */
- /* .footer-brand-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.footer-brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-   margin-left: 5px;  */
-
-
- /* .footer-brand-text .logo {
-  margin: 0;
-  width: 65px;
-  height: 65px;
-  object-fit: contain;
-} 
-
-.footer-brand-text h3 {
-  margin: 5px 0;
-  font-size: 20px;
-  color: #0759a3;
-}
-
-.footer-brand-text p {
-  margin: 0;
-  font-size: 12px;
-  color: #293e52;
-} 
-  .Live{
-  color: green;
-  font-size: 20px;
-}
-.Mentor{
-  color: rgb(52, 39, 125);
-  font-size: 20px;
-}
-.footer-brand-text p{
-  margin: 5px 0 0;
-  color: #3e5580;
-  font-size: 12px;
-  line-height: 1;
-  transform: translateY(-5px);
-
-}  */
-
-
-/*====================*/
-
-
 .footer-brand-text {
   display: grid;
   grid-template-columns: 55px 1fr;
@@ -786,8 +734,7 @@ body {
   object-fit: contain;
   margin: 0;
   position: relative;
-  /* transform: translate(0px); */
-  /* top: 15px; */
+ 
 }
 
 /* LMH */
@@ -802,8 +749,6 @@ body {
   line-height: 1;
   position: relative;
   transform: translate(-75px);
-  /* top:-50px; */
-
 }
 
 /* LiveMentorHub */
@@ -814,8 +759,6 @@ body {
   line-height: 1;
   position: relative;
   transform: translate(-45px);
-
-  /* top: -2px; */
 }
 
 .footer-brand-text h3 .Live {
@@ -823,8 +766,6 @@ body {
   font-size: 16px;
   position: relative;
   transform: translate(-45px);
-
-  /* top: -23px; */
 }
 
 .footer-brand-text h3 .MentorHub {
@@ -833,7 +774,7 @@ color: #072c59;
   position: relative;
   transform: translate(-45px);
 
-  /* top: -23px; */
+ 
 }
 
 /* Learn • Connect • Grow */ 
@@ -846,7 +787,7 @@ color: #072c59;
   line-height: 1;
   position: relative;
   transform: translate(-55px);
-  /* top: -45px; */
+
 }
 
 
@@ -1283,8 +1224,8 @@ color: #072c59;
 }
 
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   flex-shrink: 0;
 }
