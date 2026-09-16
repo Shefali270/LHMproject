@@ -1228,6 +1228,7 @@ color: #072c59;
   height: 60px;
   object-fit: contain;
   flex-shrink: 0;
+  transform: translate(15px);
 }
 
 .logo-text {
