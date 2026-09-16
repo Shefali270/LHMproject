@@ -7,6 +7,8 @@ import seachLogo from "./seach logo.png";
 // ================= BACKGROUND VIDEO =================
 import screen from "./screen.jpeg";
 
+
+
 // ================= ROLE IMAGES =================
 import Student from "./Student.png";
 import Teacher from "./Teacher.png";
