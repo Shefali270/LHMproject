@@ -2389,7 +2389,7 @@ body {
   .hero-content .box-row .Feature-iteam {
     width: 100% ;
     min-width: 0 ;
-    max-width: 100% !;
+    max-width: 100% ;
     flex: none ;
   }
 }
