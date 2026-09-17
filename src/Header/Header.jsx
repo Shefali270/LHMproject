@@ -6,9 +6,6 @@ import seachLogo from "./seach logo.png";
 
 // ================= BACKGROUND VIDEO =================
 import screen from "./screen.jpeg";
-
-
-
 // ================= ROLE IMAGES =================
 import Student from "./Student.png";
 import Teacher from "./Teacher.png";
@@ -21,8 +18,6 @@ import blue from "./blue.jpeg";
 import computerlogo from "./computerlogo.png";
 import darkblue from "./darkblue.jpeg";
 import green from "./green.jpeg";
-
-
 
 
 function Header() {
@@ -203,9 +198,9 @@ function Header() {
 
           <p>
             Your one-stop platform for Learning, mentoring, career growth
-            <br />
+            <br/>
             and real opportunities. Connect with the right people,
-            <br />
+            <br/>
             right resources and the right opportunities-all in one place.
           </p>
 

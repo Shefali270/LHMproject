@@ -497,7 +497,7 @@ function Popular() {
             <a href="/">Courses</a>
             <a href="/">Mentors</a>
             <a href="/">Institutions</a>
-            <a href="/">Careers</a>
+    
             <a href="/">Contact</a>
 
           </div>
@@ -535,7 +535,7 @@ function Popular() {
             <a href="/">Privacy Policy</a>
             <a href="/">Terms & Conditions</a>
             <a href="/">Refund Policy</a>
-            <a href="/">Sitemap</a>
+     
 
           </div>
 
