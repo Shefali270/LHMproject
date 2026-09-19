@@ -70,7 +70,11 @@ body {
   height: 85px;
   object-fit: contain;
   font-size: 20px;
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 0787d96 (Update project)
 }
 
 .logo-text {
@@ -79,6 +83,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   margin-left: 5px;
+  
 }
 
 .company-name {
@@ -1072,6 +1077,7 @@ nav a:hover {
 
   .logo-text {
     margin-left: 5px;
+    transform:translate(20px) ;
   }
 
   .company-name {

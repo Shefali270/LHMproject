@@ -20,6 +20,24 @@ import { seach } from "../constants/image.js"
 import { screen} from "../constants/image.js"
 
 
+<<<<<<< HEAD
+=======
+// ================= BACKGROUND VIDEO =================
+import screen from "./screen.jpeg";
+
+// ================= ROLE IMAGES =================
+import Student from "./Student.png";
+import Teacher from "./Teacher.png";
+import ArrowIcons from "./ArrowIcons.png";
+import InstitutionLogo from "./InstitutionLogo.png";
+import ProfessionalLogo from "./professional logo.webp";
+import CompanyLogo from "./companyLogo.jpg";
+import JobLogo from "./jobLogo.png";
+import blue from "./blue.jpeg";
+import computerlogo from "./computerlogo.png";
+import darkblue from "./darkblue.jpeg";
+import green from "./green.jpeg";
+>>>>>>> 0787d96 (Update project)
 
 
 function Header() {
@@ -30,7 +48,6 @@ function Header() {
       {/* ================= LOGO ================= */}
 
       <div className="logo-header">
-
         <img
           src={logo}
           alt="LMH Project"
