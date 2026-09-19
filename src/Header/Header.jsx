@@ -5,19 +5,19 @@ import "./Header.css";
 import {logo} from "../constants/image"
 
 
-import {bluepath} from "../constants/image"
-import {companyLogopath} from "../constants/image"
-import {computerlogopath} from "../constants/image"
-import {Studentpath } from "../constants/image"
-import {greenpath} from "../constants/image"
+import {blue} from "../constants/image"
+import {company} from "../constants/image"
+import {computer} from "../constants/image"
+import {Student} from "../constants/image"
+import {green} from "../constants/image"
 
-import {darkbluepath} from "../constants/image"
-import { InstitutionLogopath } from "../constants/image"
-import { jobLogopath } from "../constants/image"
-import { professionallogopath } from "../constants/image"
-import { Teacherpath } from "../constants/image"
-import { seachlogopath } from "../constants/image"
-import { screenpath} from "../constants/image"
+import {darkblue} from "../constants/image"
+import { Institution } from "../constants/image"
+import { job } from "../constants/image"
+import { professional} from "../constants/image"
+import { Teacher } from "../constants/image"
+import { seach} from "../constants/image"
+import { screen} from "../constants/image"
 import { scanlogo } from "../constants/image"
 
 
@@ -63,8 +63,8 @@ function Header() {
 <div className="mobile-header-buttons">
 
   <button className="mobile-search-btn">
-    <img src={seachlogopath} alt="Search" />
-  </button>
+    <img src={seach} alt="Search" />
+  </button> 
 
  <button
   className="menu-btn"
@@ -123,7 +123,7 @@ function Header() {
           className="search"
         >
           <img
-            src={seachlogopath}
+            src={seach}
             alt="Search"
           />
         </a>
@@ -168,12 +168,12 @@ function Header() {
           // playsInline
         /> */}
 
-
-         {/* <img
+{/* 
+          <img
           src={screen}
           alt="LMH Project"
           className="logo"
-        /> */}
+        />  */}
 
 
         {/* ================= DARK OVERLAY ================= */}
@@ -237,7 +237,7 @@ function Header() {
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-      <img src={computerlogopath} alt="Live Classes" />
+      <img src={computer} alt="Live Classes" />
     </div>
 
     <div className="feature-text">
@@ -249,7 +249,7 @@ function Header() {
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-      <img src={greenpath} alt="Expert Mentors" />
+      <img src={green} alt="Expert Mentors" />
     </div>
 
     <div className="feature-text">
@@ -261,7 +261,7 @@ function Header() {
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-     <img src={bluepath} alt="Learn at Your Own Pace" />
+     <img src={blue} alt="Learn at Your Own Pace" />
     </div>
 
     <div className="feature-text">
@@ -273,7 +273,7 @@ function Header() {
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-      <img src={darkbluepath} alt="Career Guidance" />
+      <img src={darkblue} alt="Career Guidance" />
     </div>
 
     <div className="feature-text">
@@ -309,7 +309,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={Studentpath}
+            src={Student}
             alt="Student"
             className="role-logo"
           />
@@ -334,7 +334,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={Teacherpath}
+            src={Teacher}
             alt="Teacher"
             className="role-logo"
           />
@@ -359,7 +359,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={InstitutionLogopath}
+            src={Institution}
             alt="Institution"
             className="role-logo"
           />
@@ -384,7 +384,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={professionallogopath}
+            src={professional}
             alt="Professional Mentor"
             className="role-logo"
           />
@@ -409,7 +409,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={companyLogopath}
+            src={company}
             alt="Company"
             className="role-logo"
           />
@@ -434,7 +434,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={jobLogopath}
+            src={job}
             alt="Job Seeker"
             className="role-logo"
           />
