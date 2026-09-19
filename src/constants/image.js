@@ -13,7 +13,7 @@ export const Teacher = "../../src/assets/Teacher.png";
 export const qr = "../../src/assets/qr.jpeg";
 export const screen= "../../src/assets/screen.jpeg";
 export const seach= "../../src/assets/seach.png";
-export const scanlogo = "../../src/assets/scanlogo.png";     
+// export const scanlogo = "../../src/assets/scanlogo.png";     
 
 
 
