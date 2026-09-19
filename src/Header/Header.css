@@ -1,9 +1,4 @@
-/* =====================================================
-   RESET
-===================================================== */
-/* =====================================================
-   RESET
-===================================================== */
+
 /* =====================================================
    RESET
 ===================================================== */
@@ -75,6 +70,7 @@ body {
   height: 80px;
   object-fit: contain;
   font-size: 20px;
+  
 }
 
 .logo-text {
@@ -131,7 +127,7 @@ body {
 ===================================================== */
 
 nav {
-  position: relative;
+  position :relative;
   width: 100%;
   min-height: 85px;
   display: flex;
@@ -192,7 +188,7 @@ nav a:hover {
 
 .login-btn:hover {
   background: #2563eb;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 
@@ -204,7 +200,7 @@ nav a:hover {
   padding: 9px 17px;
   border-radius: 5px;
   background: #2c853a;
-  color: #ffffff !important;
+  color: #ffffff ;
   white-space: nowrap;
 }
 
@@ -340,7 +336,12 @@ nav a:hover {
   gap: 10px;
   font-size: 14px;
   font-weight: 600;
+  margin-top: 70px;
+  transform: translate(50px);
+
+
 }
+
 
 .explore-courses {
   padding: 12px 24px;
@@ -350,6 +351,8 @@ nav a:hover {
   color: #080606;
   font-size: 14px;
   font-weight: 600;
+  margin-top: 70px;
+  transform: translate(50px);
 }
 
 /* =====================================================
@@ -445,6 +448,19 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 22px;
+  position: relative;
+  top: 150px;
+  transform: translate(-350px);
+}
+
+@media (max-width: 600px) {
+  .box-row {
+    top: 0;
+    margin-top: -50px;
+    transform: translate(25px);
+    row-gap: 10px;
+    column-gap: 70px
+  }
 }
 
 .Feature-iteam {
@@ -2492,4 +2508,13 @@ body {
     background: #2c853a ;
     border: 1px solid #2c853a ;
   }
+
+  @media (max-width: 600px) {
+  .get-Started,
+  .explore-courses{
+    position: relative ;
+    top: -50px;
+    transform: translate(50px) ;
+  }
+}
 }

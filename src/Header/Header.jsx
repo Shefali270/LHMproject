@@ -1,23 +1,25 @@
 import { useState } from "react";
+
 import "./Header.css";
 
-import logo from "./splashLogo.png";
-import seachLogo from "./seach logo.png";
+import {logo} from "../constants/image"
 
-// ================= BACKGROUND VIDEO =================
-import screen from "./screen.jpeg";
-// ================= ROLE IMAGES =================
-import Student from "./Student.png";
-import Teacher from "./Teacher.png";
-import ArrowIcons from "./ArrowIcons.png";
-import InstitutionLogo from "./InstitutionLogo.png";
-import ProfessionalLogo from "./professional logo.webp";
-import CompanyLogo from "./companyLogo.jpg";
-import JobLogo from "./jobLogo.png";
-import blue from "./blue.jpeg";
-import computerlogo from "./computerlogo.png";
-import darkblue from "./darkblue.jpeg";
-import green from "./green.jpeg";
+
+import {bluepath} from "../constants/image"
+import {companyLogopath} from "../constants/image"
+import {computerlogopath} from "../constants/image"
+import {Studentpath } from "../constants/image"
+import {greenpath} from "../constants/image"
+
+import {darkbluepath} from "../constants/image"
+import { InstitutionLogopath } from "../constants/image"
+import { jobLogopath } from "../constants/image"
+import { professionallogopath } from "../constants/image"
+import { Teacherpath } from "../constants/image"
+import { seachlogopath } from "../constants/image"
+import { screenpath} from "../constants/image"
+import { scanlogo } from "../constants/image"
+
 
 
 function Header() {
@@ -60,7 +62,7 @@ function Header() {
 <div className="mobile-header-buttons">
 
   <button className="mobile-search-btn">
-    <img src={seachLogo} alt="Search" />
+    <img src={seachlogopath} alt="Search" />
   </button>
 
  <button
@@ -120,7 +122,7 @@ function Header() {
           className="search"
         >
           <img
-            src={seachLogo}
+            src={seachlogopath}
             alt="Search"
           />
         </a>
@@ -166,12 +168,13 @@ function Header() {
         /> */}
 
 
-
          {/* <img
           src={screen}
           alt="LMH Project"
           className="logo"
         /> */}
+
+
         {/* ================= DARK OVERLAY ================= */}
 
         <div className="hero-overlay"></div>
@@ -203,7 +206,7 @@ function Header() {
             <br/>
             right resources and the right opportunities-all in one place.
           </p>
-
+</div>
 
           {/* ================= BUTTONS ================= */}
 
@@ -221,19 +224,19 @@ function Header() {
 
           {/* ================= FEATURES ================= */}
 
-           {/* <div className="features">
+           <div className="features">
 
             <div className="Feature-iteam">
 
               <div className="feature-icon blue">
                 <span className="icon-screen"></span>
-              </div> */}
+              </div>
 
     <div className="box-row">
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-      <img src={computerlogo} alt="Live Classes" />
+      <img src={computerlogopath} alt="Live Classes" />
     </div>
 
     <div className="feature-text">
@@ -245,7 +248,7 @@ function Header() {
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-      <img src={green} alt="Expert Mentors" />
+      <img src={greenpath} alt="Expert Mentors" />
     </div>
 
     <div className="feature-text">
@@ -257,7 +260,7 @@ function Header() {
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-     <img src={blue} alt="Learn at Your Own Pace" />
+     <img src={bluepath} alt="Learn at Your Own Pace" />
     </div>
 
     <div className="feature-text">
@@ -269,7 +272,7 @@ function Header() {
 
   <div className="Feature-iteam">
     <div className="feature-icon">
-      <img src={darkblue} alt="Career Guidance" />
+      <img src={darkbluepath} alt="Career Guidance" />
     </div>
 
     <div className="feature-text">
@@ -282,13 +285,13 @@ function Header() {
 
 
          {/* <div className="box-row"> 
-            <div className="box">Live & Interactive </r> <span>classes</span></div>
+            <div className="box">Live & Interactive  <span>classes</span></div>
              <div className="box">Expert Mentors<span>&Teachers</span></div>
               <div className="box">Learn at your<span>Own Pace</span></div>
                <div className="box">Career Guidance<span>& Opportunties</span></div>
-          </div> 
+          </div>  */}
 
-        </div> */}
+        </div>
 </div>
       </section>
 
@@ -305,7 +308,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={Student}
+            src={Studentpath}
             alt="Student"
             className="role-logo"
           />
@@ -330,7 +333,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={Teacher}
+            src={Teacherpath}
             alt="Teacher"
             className="role-logo"
           />
@@ -355,7 +358,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={InstitutionLogo}
+            src={InstitutionLogopath}
             alt="Institution"
             className="role-logo"
           />
@@ -380,7 +383,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={ProfessionalLogo}
+            src={professionallogopath}
             alt="Professional Mentor"
             className="role-logo"
           />
@@ -405,7 +408,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={CompanyLogo}
+            src={companyLogopath}
             alt="Company"
             className="role-logo"
           />
@@ -430,7 +433,7 @@ function Header() {
         <div className="role-box">
 
           <img
-            src={JobLogo}
+            src={jobLogopath}
             alt="Job Seeker"
             className="role-logo"
           />
@@ -540,8 +543,6 @@ function Header() {
         </div>
 
       </section>
-
-
     </div>
   );
 }
