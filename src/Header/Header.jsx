@@ -5,20 +5,19 @@ import "./Header.css";
 import {logo} from "../constants/image"
 
 
+
 import {blue} from "../constants/image"
 import {company} from "../constants/image"
 import {computer} from "../constants/image"
 import {Student} from "../constants/image"
 import {green} from "../constants/image"
-
 import {darkblue} from "../constants/image"
 import { Institution } from "../constants/image"
 import { job } from "../constants/image"
-import { professional} from "../constants/image"
+import { professional } from "../constants/image"
 import { Teacher } from "../constants/image"
-import { seach} from "../constants/image"
+import { seach } from "../constants/image"
 import { screen} from "../constants/image"
-import { scanlogo } from "../constants/image"
 
 
 
