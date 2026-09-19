@@ -22,6 +22,7 @@ import { scanlogo } from "../constants/image"
 
 
 
+
 function Header() {
    const [menuOpen, setMenuOpen] = useState(false);
   return (

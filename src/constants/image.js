@@ -15,7 +15,7 @@ export const Teacherpath = "../../src/assets/Teacherpath.png";
 export const qr = "../../src/assets/qr.jpeg";
 export const screenpath = "../../src/assets/screenpath.jpeg";
 export const seachlogopath = "../../src/assets/seachlogopath.png";
-export const scanlogo = "../../src/asserts/scanlogo.png";
+export const scanlogo = "../../src/asserts/scanlogo.png";     
 
 
 
