@@ -2,22 +2,22 @@ import { useState } from "react";
 
 import "./Header.css";
 
-import {logo} from "../constants/image"
+import {logo} from "../constants/image.js"
 
 
 
-import {blue} from "../constants/image"
-import {company} from "../constants/image"
-import {computer} from "../constants/image"
-import {Student} from "../constants/image"
-import {green} from "../constants/image"
-import {darkblue} from "../constants/image"
-import { Institution } from "../constants/image"
-import { job } from "../constants/image"
-import { professional } from "../constants/image"
-import { Teacher } from "../constants/image"
-import { seach } from "../constants/image"
-import { screen} from "../constants/image"
+import {blue} from "../constants/image.js"
+import {company} from "../constants/image.js"
+import {computer} from "../constants/image.js"
+import {Student} from "../constants/image.js"
+import {green} from "../constants/image.js"
+import {darkblue} from "../constants/image.js"
+import { Institution } from "../constants/image.js"
+import { job } from "../constants/image.js"
+import { professional } from "../constants/image.js"
+import { Teacher } from "../constants/image.js"
+import { seach } from "../constants/image.js"
+import { screen} from "../constants/image.js"
 
 
 
