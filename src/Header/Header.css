@@ -89,7 +89,9 @@ body {
   line-height: 1;
   /* display:block;                        sir se puchna h   */
   margin-left: 0;
+ 
 }
+
 
 /* .LiveMentorHub {
   margin: 4px 0 0;
@@ -1066,7 +1068,7 @@ nav a:hover {
   .logo {
     width: 55px;
     height: 55px;
-
+    
     flex-shrink: 0;
   }
 
@@ -1077,6 +1079,7 @@ nav a:hover {
 
   .company-name {
     font-size: 17px;
+  transform: translate(-15px);
   }
 
   .LiveMentorHub {
@@ -1901,6 +1904,7 @@ html,
     display: flex;
     align-items: center;
     z-index: 20;
+    
   }
 
   .header .logo-header > .logo {
@@ -1909,6 +1913,7 @@ html,
     object-fit: contain;
     display: block;
     flex-shrink: 0;
+    
   }
 
   .header .logo-header .logo-text {
@@ -1924,6 +1929,7 @@ html,
     margin: 0;
     font-size: 24px;
     line-height: 1;
+
   }
 
   .header .logo-header .Live,
@@ -2092,6 +2098,7 @@ html,
     font-size: 17px;
     line-height: 1;
     white-space: nowrap;
+    transform: translate(-2px);
   }
 
   .header .logo-header .logo-text h3 {
@@ -2307,7 +2314,7 @@ body {
 @media (max-width: 600px) {
 
   .mobile-header-buttons {
-    display: flex !important;
+    display: flex;
     position: absolute;
     top: 18px;
     right: 12px;
