@@ -6,6 +6,7 @@ import "./Header.css";
 // import Arrowicons from "./Arrowicons.png";
 import blue from "./blue.jpeg";
 import computer from "./computer.png";
+import company from "./company.jpg";
 import darkblue from "./darkblue.jpeg";
 import green from "./green.jpeg";
 import Institution from "./Institution.png";
