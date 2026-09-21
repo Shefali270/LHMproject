@@ -2524,5 +2524,47 @@ body {
     top: -50px;
     transform: translate(50px) ;
   }
+  @media (max-width: 600px) {
+
+  .box-row {
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+    width: 350px ;
+    gap: 18px 8px ;
+   margin: -35px 0 25px 35px;
+    padding: 0 ;
+    position: relative ;
+    top: 0;
+    transform: none ;
+  }
+
+  .box-row .Feature-iteam {
+    display: flex ;
+    align-items: center ;
+    width: 170px ;
+    gap: 5px ;
+  }
+
+  .box-row .feature-icon,
+  .box-row .feature-icon img {
+    width: 38px ;
+    height: 38px ;
+    min-width: 38px ;
+  }
+
+  .box-row .feature-text {
+    width: 125px ;
+    text-align: left;
+  }
+
+  .box-row .feature-text h3,
+  .box-row .feature-text p {
+    font-size: 12px ;
+    line-height: 1.25;
+    margin: 0 ;
+    white-space: normal ;
+  }
+}
+
 }
 }

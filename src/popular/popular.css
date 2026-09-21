@@ -453,11 +453,14 @@ body {
   color: #159447;
   font-size: 8px;
   font-weight: 700;
+    margin-top: -5px;
+
 }
 
 .phone-screen small {
   color: #555555;
   font-size: 6px;
+  margin-top: -15px;
 }
 
 
@@ -467,20 +470,19 @@ body {
 
 .app-middle h2 {
   margin: 0 0 10px;
-
   color: #103d6c;
-
   font-size: 24px;
   line-height: 1.25;
+  transform: none;
+  text-align: left;
 }
 
 .app-middle p {
   margin: 0 0 12px;
-
   color: #536879;
-
   font-size: 12px;
   line-height: 1.5;
+  text-align: left;
 }
 
 
@@ -501,6 +503,7 @@ body {
   border-radius: 6px;
 
   background: #050505;
+  
   color: #ffffff;
 
   display: flex;
@@ -633,6 +636,7 @@ body {
   min-height: 100px;
   padding: 15px 75px;
   background: #07518d;
+ 
   color: #ffffff;
   font-size: left;
   display: flex;
@@ -834,13 +838,12 @@ body {
 
 .footer-about .about-text {
   max-width: 290px;
-
   margin-top: 15px;
-
+  margin-left: 35px;
   color: #5d6d7b;
-
   font-size: 11px;
   line-height: 1.55;
+  text-align: left;
 }
 
 
@@ -852,6 +855,7 @@ body {
   display: flex;
   gap: 12px;
   margin-top: 15px;
+  margin-left: 35px;
 }
 
 .social-icons span {
@@ -1074,24 +1078,21 @@ body {
     display: none;
   }
 
-  .app-section {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-
-    padding: 25px 15px;
-
-    text-align: center;
-  }
+.app-section {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 25px 15px;
+  text-align: center;
+}
 
   .app-features {
     padding-left: 0;
     text-align: left;
   }
 
-  .store-buttons {
-    justify-content: center;
-  }
+.store-buttons {
+  justify-content: flex-start;
+}
 @media (max-width: 600px) {
   .qr-section {
     position: relative;
@@ -1145,7 +1146,7 @@ body {
     font-weight: 700;
     color: #293e52;
     text-align: center;
-    transform: translate(-25px);
+    transform: translate(-3px);
 
   }
 }
@@ -1311,5 +1312,6 @@ body {
     overflow-x: hidden ;
     overflow-y: visible ;
   }
+  
 }
 }
