@@ -3,7 +3,6 @@ import { useState } from "react";
 import "./Header.css";
 
 
-import Arrowicons from "./Arrowicons.png";
 import blue from "./blue.jpeg";
 import computer from "./computer.png";
 import company from "./company.jpg";
