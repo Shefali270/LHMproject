@@ -1,19 +1,30 @@
-export const logo = "../../src/assets/logo.png";
-export const blue= "../../src/assets/blue.jpeg";
-export const company = "../../src/assets/company.jpg";
-export const Student = "../../src/assets/Student.png";
-export const green= "../../src/assets/green.jpeg";
-export const computer = "../../src/assets/computer.png";
-export const darkblue = "../../src/assets/darkblue.jpeg";
-export const Institution = "../../src/assets/Institution.png";
+// export const logo = "../../src/assets/logo.png";
+// export const blue= "../../src/assets/blue.jpeg";
+// export const company = "../../src/assets/company.jpg";
+// export const Student = "../../src/assets/Student.png";
+// export const green= "../../src/assets/green.jpeg";
+// export const computer = "../../src/assets/computer.png";
+// export const darkblue = "../../src/assets/darkblue.jpeg";
+// export const Institution = "../../src/assets/Institution.png";
 
-export const job = "../../src/assets/job.png";
-export const professional = "../../src/assets/professional.webp";
-export const Teacher = "../../src/assets/Teacher.png";
-export const qr = "../../src/assets/qr.jpeg";
-export const screen= "../../src/assets/screen.jpeg";
-export const seach= "../../src/assets/seach.png";
-// export const scanlogo = "../../src/assets/scanlogo.png";     
+// export const job = "../../src/assets/job.png";
+// export const professional = "../../src/assets/professional.webp";
+// export const Teacher = "../../src/assets/Teacher.png";
+// export const qr = "../../src/assets/qr.jpeg";
+// export const screen = "../../src/assets/screen.jpeg";
+// export const seach = "../../src/assets/seach.png";
+// // export const scanlogo = "../../src/assets/scanlogo.png";     
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32,18 +43,6 @@ export const seach= "../../src/assets/seach.png";
 
 
 // export const Teacherpath = "./assets/Teacherpath.png";
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

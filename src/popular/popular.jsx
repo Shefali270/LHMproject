@@ -2,7 +2,7 @@ import "./popular.css";
 import englishLogo from "./english logo.webp";
 import scanlogo from "./scanlogo.png";
 import logo from "./splashLogo.png";
-import { qr } from "../constants/image";
+import  qr  from "./image";
 
 
 function Popular() {

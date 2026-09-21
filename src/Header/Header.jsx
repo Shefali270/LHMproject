@@ -2,24 +2,38 @@ import { useState } from "react";
 
 import "./Header.css";
 
-import {logo} from "../constants/image.js"
+
+// import Arrowicons from "./Arrowicons.png";
+import blue from "./blue.jpeg";
+import computer from "./computer.png";
+import darkblue from "./darkblue.jpeg";
+import green from "./green.jpeg";
+import Institution from "./Institution.png";
+import job from "./job.png";
+import logo from "./logo.png";
+import professional from "./professional.webp";
+// import qr from "./qr.jpeg";
+import screen from "./screen.jpeg";
+import seach from "./seach.png";
+import Student from "./Student.png";
+import Teacher from "./Teacher.png";
 
 
 
-import {blue} from "../constants/image.js"
-import {company} from "../constants/image.js"
-import {computer} from "../constants/image.js"
-import {Student} from "../constants/image.js"
-import {green} from "../constants/image.js"
-import {darkblue} from "../constants/image.js"
-import { Institution } from "../constants/image.js"
-import { job } from "../constants/image.js"
-import { professional } from "../constants/image.js"
-import { Teacher } from "../constants/image.js"
-import { seach } from "../constants/image.js"
-import { screen} from "../constants/image.js"
+// import {logo} from "../constants/image.js"
 
-
+// import {blue} from "../constants/image.js"
+// import {company} from "../constants/image.js"
+// import {computer} from "../constants/image.js"
+// import {Student} from "../constants/image.js"
+// import {green} from "../constants/image.js"
+// import {darkblue} from "../constants/image.js"
+// import { Institution } from "../constants/image.js"
+// import { job } from "../constants/image.js"
+// import { professional } from "../constants/image.js"
+// import { Teacher } from "../constants/image.js"
+// import { seach } from "../constants/image.js"
+// import { screen} from "../constants/image.js"
 
 
 function Header() {
@@ -52,7 +66,7 @@ function Header() {
 </h3>
 
           <p className="tagline">
-            Learn • Connect • Grow
+            Learn • Connect • Grow    
           </p>
 
         </div>
