@@ -621,6 +621,7 @@ body {
   font-family: "Brush Script MT", cursive;
   font-size: 18px;
   white-space: nowrap;
+  transform: translate(30px);
 }
 
 /* =========================================
@@ -734,6 +735,7 @@ body {
   object-fit: contain;
   margin: 0;
   position: relative;
+  transform: translate(35px);
  
 }
 
@@ -748,7 +750,7 @@ body {
   font-weight: 800;
   line-height: 1;
   position: relative;
-  transform: translate(-75px);
+  transform: translate(-125px);
 }
 
 /* LiveMentorHub */
@@ -758,21 +760,21 @@ body {
   margin: 4px 0 0;
   line-height: 1;
   position: relative;
-  transform: translate(-45px);
+  transform: translate(-95px);
 }
 
 .footer-brand-text h3 .Live {
   color: green;
   font-size: 16px;
   position: relative;
-  transform: translate(-45px);
+  transform: translate(-95px);
 }
 
 .footer-brand-text h3 .MentorHub {
 color: #072c59;  
  font-size: 16px;
   position: relative;
-  transform: translate(-45px);
+  transform: translate(-495px);
 
  
 }
@@ -786,7 +788,8 @@ color: #072c59;
   font-size: 10px;
   line-height: 1;
   position: relative;
-  transform: translate(-55px);
+  top: 5;
+  transform: translate(-105px);
 
 }
 
@@ -1228,7 +1231,7 @@ color: #072c59;
   height: 60px;
   object-fit: contain;
   flex-shrink: 0;
-  transform: translate(15px);
+  transform: translate(25px);
 }
 
 .logo-text {
@@ -1276,6 +1279,7 @@ color: #072c59;
   font-weight: 600;
   line-height: 1.2;
   color: #072c59;
+  transform: translate(30px);
 }
 }
 

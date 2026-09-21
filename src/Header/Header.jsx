@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Header.css";
 
 
-// import Arrowicons from "./Arrowicons.png";
+import Arrowicons from "./Arrowicons.png";
 import blue from "./blue.jpeg";
 import computer from "./computer.png";
 import company from "./company.jpg";
@@ -37,6 +37,24 @@ import Teacher from "./Teacher.png";
 // import { screen} from "../constants/image.js"
 
 
+// ================= BACKGROUND VIDEO =================
+// import screen from "./screen.jpeg";
+
+// ================= ROLE IMAGES =================
+// import Student from "./Student.png";
+// import Teacher from "./Teacher.png";
+// import ArrowIcons from "./ArrowIcons.png";
+// import InstitutionLogo from "./InstitutionLogo.png";
+// import ProfessionalLogo from "./professional logo.webp";
+// import CompanyLogo from "./companyLogo.jpg";
+// import JobLogo from "./jobLogo.png";
+// import blue from "./blue.jpeg";
+// import computerlogo from "./computerlogo.png";
+// import darkblue from "./darkblue.jpeg";
+// import green from "./green.jpeg";
+
+
+
 function Header() {
    const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -45,7 +63,6 @@ function Header() {
       {/* ================= LOGO ================= */}
 
       <div className="logo-header">
-
         <img
           src={logo}
           alt="LMH Project"

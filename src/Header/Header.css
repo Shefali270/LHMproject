@@ -70,7 +70,6 @@ body {
   height: 85px;
   object-fit: contain;
   font-size: 20px;
-  
 }
 
 .logo-text {
@@ -79,6 +78,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   margin-left: 5px;
+  
 }
 
 .company-name {
@@ -1072,6 +1072,7 @@ nav a:hover {
 
   .logo-text {
     margin-left: 5px;
+    transform:translate(20px) ;
   }
 
   .company-name {
@@ -2053,7 +2054,7 @@ html,
 
 /* MOBILE */
 @media (max-width: 600px) {
-@media (max-width: 600px) {
+
 
   .header .logo-header {
     position: fixed;
@@ -2386,7 +2387,7 @@ body {
 }
 
 }
-}
+
 
 
 /* 4 BOX - PHONE POSITION + 2x2 */
